@@ -207,7 +207,14 @@
     transform: translateY(-2px);
   }
 
-  /* Inline Document Download Button */
+  /* Inline Document Download Buttons Group */
+  .doc-btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 16px;
+  }
+
   .btn-doc {
     display: inline-flex;
     align-items: center;
@@ -220,7 +227,6 @@
     padding: 8px 14px;
     border-radius: 8px;
     text-decoration: none;
-    margin-top: 12px;
     transition: all 0.2s ease;
   }
 
@@ -370,7 +376,7 @@
 
   .bullet-points {
     list-style: none;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
 
   .bullet-points li {
@@ -527,6 +533,7 @@
     .project-img { height: 150px; }
     .doc-card-grid { grid-template-columns: 1fr; }
     .contact-section { padding: 32px 20px; }
+    .doc-btn-group { flex-direction: column; }
   }
 </style>
 </head>
@@ -606,10 +613,13 @@
           <li><strong>라이브 서비스 및 운영:</strong> 스팀 런칭 후 유저 데이터 모니터링, 프로모션/할인 설정 및 글로벌 유저 피드백 수집 기반의 이슈 대응을 총괄했습니다.</li>
         </ul>
 
-        <!-- 프로젝트 연동 다운로드 버튼 -->
-        <div>
+        <!-- 두 PDF 문서 다운로드 버튼 통합 배치 -->
+        <div class="doc-btn-group">
           <a href="./I am Sorry 게임 분석서.pdf" download="I am Sorry 게임 분석서.pdf" class="btn-doc">
             📥 'I am Sorry' 게임 분석서 (개발 회고 포함) PDF
+          </a>
+          <a href="./시스템 안정성을 고려한 방어력 감소 시스템 설계.pdf" download="시스템 안정성을 고려한 방어력 감소 시스템 설계.pdf" class="btn-doc">
+            📥 방어력 감소 시스템 설계서 PDF
           </a>
         </div>
 
@@ -640,13 +650,7 @@
           <li><strong>학습 곡선 단축:</strong> 비숙련 직원의 직관적 진입을 고려한 UI/UX 로직을 설계하여 진입 장벽과 작업 오류율을 낮췄습니다.</li>
         </ul>
 
-        <div>
-          <a href="./시스템 안정성을 고려한 방어력 감소 시스템 설계.pdf" download="시스템 안정성을 고려한 방어력 감소 시스템 설계.pdf" class="btn-doc">
-            📥 방어력 감소 시스템 설계서 PDF
-          </a>
-        </div>
-
-        <div class="tag-container" style="margin-top: 16px;">
+        <div class="tag-container">
           <span class="tag">Project Management</span>
           <span class="tag">Requirements Spec</span>
           <span class="tag">XR Simulation</span>
@@ -711,7 +715,7 @@
       <article class="project-card">
         <div class="card-header">
           <span class="category-badge">석사 재학</span>
-          <span class="period">2024.09 - 2026.08(예정)</span>
+          <span class="period">2024.09 - 현재</span>
         </div>
         <h3>숭실대학교 대학원 AI테크노융합학과</h3>
         <p class="project-summary">
