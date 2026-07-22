@@ -3,117 +3,476 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>이영민 | Technical Product Manager</title>
 
-<!-- ========================================================= -->
-<!-- 브라우저 탭 타이틀                                           -->
-<!-- ========================================================= -->
-<title>이영민 | 프로덕트 매니저</title>
+<!-- Pretendard Font CDN -->
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
 
 <style>
-  :root { --ink:#1a1a1a; --muted:#6b7280; --line:#e5e7eb; --accent:#2563eb; }
-  * { box-sizing:border-box; margin:0; padding:0; }
-  body {
-    font-family:-apple-system,'Apple SD Gothic Neo','Malgun Gothic','맑은 고딕',sans-serif;
-    color:var(--ink); background:#fff; line-height:1.7;
-    -webkit-text-size-adjust:100%;
+  :root {
+    --bg-page: #f8fafc;
+    --bg-card: #ffffff;
+    --text-primary: #0f172a;
+    --text-secondary: #334155;
+    --text-muted: #64748b;
+    --accent: #2563eb;
+    --accent-hover: #1d4ed8;
+    --accent-light: #eff6ff;
+    --border: #e2e8f0;
+    --border-hover: #cbd5e1;
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.08), 0 2px 4px -2px rgb(0 0 0 / 0.04);
   }
-  .wrap { max-width:720px; margin:0 auto; padding:64px 24px 96px; }
-  .name { font-size:44px; font-weight:800; letter-spacing:-0.02em; }
-  .role { font-size:19px; color:var(--muted); margin-top:10px; }
-  .rule { width:56px; height:4px; background:var(--ink); border-radius:2px; margin:28px 0 36px; }
-  .lead { font-size:20px; line-height:1.75; color:#2d3748; }
-  h2 { font-size:15px; font-weight:800; letter-spacing:0.06em; color:var(--muted);
-        margin:52px 0 18px; text-transform:uppercase; }
-  ul { list-style:none; }
-  li { padding:18px 0; border-bottom:1px solid var(--line); font-size:16px; }
-  li b { display:block; font-size:13px; color:var(--muted); font-weight:700; margin-bottom:4px; }
-  li strong { color:var(--ink); font-weight:700; font-size:17px; }
-  .desc { font-size:14px; color:#4b5563; margin-top:6px; line-height:1.6; }
-  a { color:var(--accent); text-decoration:none; font-weight:700; }
-  a:hover { text-decoration:underline; }
-  .foot { margin-top:64px; padding-top:24px; border-top:1px solid var(--line);
-          font-size:14px; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; }
-  @media (max-width:600px) {
-    .wrap { padding:44px 20px 72px; }
-    .name { font-size:34px; }
-    .lead { font-size:18px; }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+    color: var(--text-primary);
+    background-color: var(--bg-page);
+    line-height: 1.65;
+    word-break: keep-all;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 64px 24px 96px;
+  }
+
+  /* Header Section */
+  .hero {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 32px;
+  }
+
+  .badge-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    background: var(--accent-light);
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+  }
+
+  .badge-status::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    background-color: var(--accent);
+    border-radius: 50%;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+  }
+
+  .hero .role {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+  }
+
+  .hero .statement {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    border-left: 3px solid var(--accent);
+    padding-left: 16px;
+    margin-top: 16px;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 28px;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 10px 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  .btn-primary {
+    background: var(--accent);
+    color: #ffffff;
+  }
+
+  .btn-primary:hover {
+    background: var(--accent-hover);
+    transform: translateY(-1px);
+  }
+
+  /* Section Title */
+  .section-title {
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin: 48px 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .section-title::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  /* Core Competencies Grid */
+  .competency-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 16px;
+  }
+
+  .comp-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.2s ease;
+  }
+
+  .comp-card:hover {
+    border-color: var(--border-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .comp-card h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+  }
+
+  .comp-card p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  /* Timeline Cards */
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .project-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.2s ease;
+  }
+
+  .project-card:hover {
+    border-color: var(--border-hover);
+    box-shadow: var(--shadow-md);
+  }
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  .category-badge {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent);
+    background: var(--accent-light);
+    padding: 4px 10px;
+    border-radius: 6px;
+  }
+
+  .period {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-muted);
+  }
+
+  .project-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+  }
+
+  .project-summary {
+    font-size: 15px;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+    font-weight: 500;
+  }
+
+  .bullet-points {
+    list-style: none;
+    margin-bottom: 20px;
+  }
+
+  .bullet-points li {
+    position: relative;
+    padding-left: 18px;
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+    line-height: 1.6;
+  }
+
+  .bullet-points li::before {
+    content: "•";
+    position: absolute;
+    left: 4px;
+    color: var(--accent);
+    font-weight: bold;
+  }
+
+  .tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding-top: 16px;
+    border-top: 1px dashed var(--border);
+  }
+
+  .tag {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-muted);
+    background: var(--bg-page);
+    padding: 4px 10px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+  }
+
+  /* Contact Box */
+  .contact-section {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    color: #ffffff;
+    border-radius: 20px;
+    padding: 40px;
+    margin-top: 48px;
+    text-align: center;
+  }
+
+  .contact-section h3 {
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 10px;
+  }
+
+  .contact-section p {
+    font-size: 15px;
+    color: #94a3b8;
+    margin-bottom: 24px;
+  }
+
+  .contact-btn {
+    display: inline-block;
+    background: #ffffff;
+    color: #0f172a;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 12px 28px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  .contact-btn:hover {
+    background: #f1f5f9;
+    transform: translateY(-2px);
+  }
+
+  /* Footer */
+  footer {
+    margin-top: 48px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+
+  @media (max-width: 600px) {
+    .container { padding: 32px 16px 64px; }
+    .hero { padding: 28px 20px; }
+    .hero h1 { font-size: 30px; }
+    .hero .statement { font-size: 16px; }
+    .project-card { padding: 20px; }
+    .contact-section { padding: 28px 20px; }
   }
 </style>
 </head>
 <body>
-<div class="wrap">
 
-  <!-- ========================================================= -->
-  <!-- 1. 헤더 (이름 및 핵심 프로필)                               -->
-  <!-- ========================================================= -->
-  <div class="name">이영민</div>
-  <div class="role">Technical & Data-driven Product Manager</div>
+<div class="container">
 
-  <div class="rule"></div>
+  <!-- HERO HEADER -->
+  <header class="hero">
+    <div class="badge-status">Product Manager</div>
+    <h1>이영민</h1>
+    <div class="role">Technical Product Manager</div>
+    <p class="statement">
+      모호함을 배제하고, 엄밀한 논리와 데이터 기반 실행으로 프로덕트의 구조적 본질을 증명합니다.
+    </p>
+    <div class="hero-actions">
+      <a href="mailto:ym5567@naver.com" class="btn btn-primary">✉️ 이메일 문의하기</a>
+    </div>
+  </header>
 
-  <!-- ========================================================= -->
-  <!-- 2. 나를 설명하는 한 문장                                     -->
-  <!-- ========================================================= -->
-  <p class="lead">
-    막힌 상황에서 유저 반응의 원인을 정의하고, 엄밀한 논리와 데이터 기반 실행으로 문제를 해결해 온 프로덕트 매니저입니다.
-  </p>
-
-  <!-- ========================================================= -->
-  <!-- 3. 현재 진행 중인 활동                                      -->
-  <!-- ========================================================= -->
-  <h2>지금 집중하는 것</h2>
-  <ul>
-    <li>
-      <b>연구 & 도메인</b>
-      <strong>딥러닝 기반 밸런싱 자동화 프레임워크 연구 (숭실대 석사)</strong>
-      <div class="desc">인공신경망 대리모델과 역최적화(Inverse Optimization) 기법을 활용해 목표 수치에 부합하는 정밀 스탯을 산출하는 구조를 설계하고 있습니다.</div>
-    </li>
-    <li>
-      <b>역량 강화</b>
-      <strong>AI 프로덕트 매니저 (AI PM) 트랙</strong>
-      <div class="desc">AI/ML 인프라와 기술 요소를 실무 프로덕트에 접목하여 유저 가치를 끌어올리는 문제 정의 및 제품 기획을 수행하고 있습니다.</div>
-    </li>
-  </ul>
-
-  <!-- ========================================================= -->
-  <!-- 4. 주요 프로젝트 & 성과                                      -->
-  <!-- ========================================================= -->
-  <h2>주요 프로덕트 & 실행 성과</h2>
-  <ul>
-    <li>
-      <b>Commercial Product PL</b>
-      <strong>스팀 상용화 게임 총괄 출시 ('In to the 029' & 'I am Sorry')</strong>
-      <div class="desc">기획 총괄(PL)로서 인디 퍼즐 호러 프로덕트의 런칭 및 운영 전 과정을 주도했습니다. 유저 플레이 데이터와 패턴을 분석하여 반복 루프 구조의 피로 원인을 파악하고, 차기작 맵 구조를 선형화하여 유저 이탈 요인을 개선했습니다.</div>
-    </li>
-    <li>
-      <b>B2B / B2G Enterprise PM</b>
-      <strong>코레일 철도 정비 VR & 공공기관 실감형 XR 시뮬레이터 PM</strong>
-      <div class="desc">코레일 신입 정비사용 VR 훈련 시뮬레이션 및 다수의 B2B/B2G 사업에서 PM/PL을 담당했습니다. 발주처 요구사항을 정밀한 요구사항 정의서와 UX 키매핑 구조로 치환하여 개발 병목을 해결했습니다.</div>
-    </li>
-    <li>
-      <b>AI & System Logic</b>
-      <strong>국제진료 STT-AI VR & 태권도 VR AI 파이프라인 설계</strong>
-      <div class="desc">STT 기반의 음성 인식·평가 대화 루프 시스템 및 6종의 무술 콘셉트별 AI 행동 패턴 확률 알고리즘을 구축하여 정교한 인터랙션 환경을 개발했습니다.</div>
-    </li>
-  </ul>
-
-  <!-- ========================================================= -->
-  <!-- 5. 링크 및 기록                                             -->
-  <!-- ========================================================= -->
-  <h2>기록 & 연락처</h2>
-  <ul>
-    <li><a href="career.html">상세 경력 기술서 보기 →</a></li>
-    <li><a href="mailto:ym5567@naver.com">이메일 문의 (ym5567@naver.com) →</a></li>
-  </ul>
-
-  <!-- ========================================================= -->
-  <!-- 6. 푸터                                                   -->
-  <!-- ========================================================= -->
-  <div class="foot">
-    <span>2026.07.22 업데이트</span>
-    <span>이영민 | Product Manager</span>
+  <!-- CORE COMPETENCIES -->
+  <div class="section-title">Core Competencies</div>
+  <div class="competency-grid">
+    <div class="comp-card">
+      <h3>데이터 & 유저 중심 개선</h3>
+      <p>유저 플레이 패턴과 피드백 분석을 기반으로 병목 구간을 진단하고, 구조 수정을 통해 실제 유저 이탈 및 피로도를 구조적으로 해결합니다.</p>
+    </div>
+    <div class="comp-card">
+      <h3>엔터프라이즈 PM & 소통</h3>
+      <p>공공기관 및 B2B/B2G 사업의 복잡한 요구사항을 개발·디자인 팀이 명확히 이해할 수 있는 시스템 기획서와 WBS로 정밀 전환합니다.</p>
+    </div>
+    <div class="comp-card">
+      <h3>AI & 시스템 구조화</h3>
+      <p>TabNet 대리모델 및 역최적화(Inverse Optimization) 기반 프레임워크 연구 등 기술적 원리를 프로덕트에 접목하는 능력을 지녔습니다.</p>
+    </div>
   </div>
 
+  <!-- PROJECTS & EXPERIENCE -->
+  <div class="section-title">Projects & Experience</div>
+  <div class="timeline">
+
+    <!-- Card 1 -->
+    <article class="project-card">
+      <div class="card-header">
+        <span class="category-badge">B2C Commercial Product</span>
+        <span class="period">2022.01 - 2024.08</span>
+      </div>
+      <h3>스팀 상용화 게임 총괄 출시 ('In to the 029' & 'I am Sorry')</h3>
+      <p class="project-summary">인디 퍼즐 호러 프로덕트의 기획 총괄(PL)로서 초기 컨셉 기획부터 런칭 및 운영 전 과정을 리드했습니다.</p>
+      <ul class="bullet-points">
+        <li><strong>유저 피로도 문제 정의 및 구조 개선:</strong> 전작 'In to the 029'의 병렬/반복 맵 구조에서 발견된 사용자 피로 문제를 분석해, 차기작 'I am Sorry'에서는 맵 구조를 선형화하고 기믹 상태 변화 중심으로 재설계하여 피로 이슈 재발을 방지했습니다.</li>
+        <li><strong>라이브 서비스 및 운영:</strong> 스팀 런칭 후 유저 데이터 모니터링, 프로모션/할인 설정 및 글로벌 유저 피드백 수집 기반의 이슈 대응을 총괄했습니다.</li>
+      </ul>
+      <div class="tag-container">
+        <span class="tag">Product Lead</span>
+        <span class="tag">Steam Launch</span>
+        <span class="tag">User Experience</span>
+        <span class="tag">Level Design</span>
+      </div>
+    </article>
+
+    <!-- Card 2 -->
+    <article class="project-card">
+      <div class="card-header">
+        <span class="category-badge">B2B / B2G Enterprise PM</span>
+        <span class="period">2022.10 - 2025.09</span>
+      </div>
+      <h3>코레일 철도 정비 VR & 공공기관 XR 시뮬레이터 사업 PM</h3>
+      <p class="project-summary">코레일 신입 정비사용 XR 시뮬레이션 및 다수의 국가 가상훈련 콘텐츠 사업 PM/PL을 담당했습니다.</p>
+      <ul class="bullet-points">
+        <li><strong>이해관계자 요구사항 정의:</strong> 발주처 요구사항을 분석하여 개발/디자인 명세서, UX 키매핑 설계서, 운영자/사용자 매뉴얼로 치환했습니다.</li>
+        <li><strong>학습 곡선 단축:</strong> 비숙련 직원의 직관적 진입을 고려한 UI/UX 로직을 설계하여 진입 장벽과 작업 오류율을 낮췄습니다.</li>
+      </ul>
+      <div class="tag-container">
+        <span class="tag">Project Management</span>
+        <span class="tag">Requirements Spec</span>
+        <span class="tag">XR Simulation</span>
+        <span class="tag">B2G Project</span>
+      </div>
+    </article>
+
+    <!-- Card 3 -->
+    <article class="project-card">
+      <div class="card-header">
+        <span class="category-badge">AI & System Logic</span>
+        <span class="period">2019.07 - 2021.08</span>
+      </div>
+      <h3>국제진료 STT-AI VR & 태권도 VR AI 파이프라인 설계</h3>
+      <p class="project-summary">음성인식(STT) 기반 의료통역 교육 시스템 및 태권도 AI 행동 패턴 로직을 개발했습니다.</p>
+      <ul class="bullet-points">
+        <li><strong>AI Decision Logic:</strong> 6종 캐릭터의 무술 콘셉트별 행동 패턴 및 확률 기반 Decision Logic 구축.</li>
+        <li><strong>인터랙션 구조 설계:</strong> STT 기반 대화 인식-평가 점수 산출 데이터 파이프라인 및 인터랙션 시스템 설계.</li>
+      </ul>
+      <div class="tag-container">
+        <span class="tag">AI Behavior Logic</span>
+        <span class="tag">STT Integration</span>
+        <span class="tag">System Design</span>
+      </div>
+    </article>
+
+  </div>
+
+  <!-- EDUCATION & RESEARCH -->
+  <div class="section-title">Education & Research</div>
+  <div class="timeline">
+    <article class="project-card">
+      <div class="card-header">
+        <span class="category-badge">석사 재학</span>
+        <span class="period">2024.09 - 현재</span>
+      </div>
+      <h3>숭실대학교 대학원 AI테크노융합학과</h3>
+      <p class="project-summary">
+        <strong>연구 내용:</strong> TabNet 대리모델(Surrogate Model)과 역최적화(Inverse Optimization), 경사하강법 기반의 밸런싱 자동화 프레임워크 연구. 데이터 기반 수치 생성 및 자동화 로직 구축을 탐구하고 있습니다.
+      </p>
+    </article>
+
+    <article class="project-card">
+      <div class="card-header">
+        <span class="category-badge">학사 졸업</span>
+        <span class="period">2014.03 - 2020.02</span>
+      </div>
+      <h3>전주대학교 게임콘텐츠학과</h3>
+      <p class="project-summary">게임 시스템 기획, 콘텐츠 개발 및 멀티미디어 공학 전반 이수.</p>
+    </article>
+  </div>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-section">
+    <h3>Get in Touch</h3>
+    <p>프로덕트 기획, 데이터 기반 시스템 설계, 프로젝트 협업에 대해 이야기 나누고 싶다면 언제든 연락해 주세요.</p>
+    <a href="mailto:ym5567@naver.com" class="contact-btn">ym5567@naver.com 메일 보내기</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© Lee Yeong-min. All rights reserved.</p>
+  </footer>
+
 </div>
+
 </body>
 </html>
