@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- ========================================================= -->
-<!-- 바꾸는 곳 1. 브라우저 탭에 뜨는 이름입니다.                    -->
+<!-- 브라우저 탭 타이틀                                           -->
 <!-- ========================================================= -->
 <title>이영민 | 프로덕트 매니저</title>
 
@@ -21,16 +21,18 @@
   .name { font-size:44px; font-weight:800; letter-spacing:-0.02em; }
   .role { font-size:19px; color:var(--muted); margin-top:10px; }
   .rule { width:56px; height:4px; background:var(--ink); border-radius:2px; margin:28px 0 36px; }
-  .lead { font-size:20px; line-height:1.75; }
+  .lead { font-size:20px; line-height:1.75; color:#2d3748; }
   h2 { font-size:15px; font-weight:800; letter-spacing:0.06em; color:var(--muted);
-       margin:52px 0 18px; text-transform:uppercase; }
+        margin:52px 0 18px; text-transform:uppercase; }
   ul { list-style:none; }
-  li { padding:14px 0; border-bottom:1px solid var(--line); font-size:17px; }
+  li { padding:18px 0; border-bottom:1px solid var(--line); font-size:16px; }
   li b { display:block; font-size:13px; color:var(--muted); font-weight:700; margin-bottom:4px; }
+  li strong { color:var(--ink); font-weight:700; font-size:17px; }
+  .desc { font-size:14px; color:#4b5563; margin-top:6px; line-height:1.6; }
   a { color:var(--accent); text-decoration:none; font-weight:700; }
   a:hover { text-decoration:underline; }
   .foot { margin-top:64px; padding-top:24px; border-top:1px solid var(--line);
-          font-size:14px; color:var(--muted); }
+          font-size:14px; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; }
   @media (max-width:600px) {
     .wrap { padding:44px 20px 72px; }
     .name { font-size:34px; }
@@ -42,49 +44,74 @@
 <div class="wrap">
 
   <!-- ========================================================= -->
-  <!-- 바꾸는 곳 2. 이름과 목표 직무입니다.                          -->
-  <!-- 실명이 부담되면 닉네임을 써도 됩니다.                          -->
+  <!-- 1. 헤더 (이름 및 핵심 프로필)                               -->
   <!-- ========================================================= -->
   <div class="name">이영민</div>
-  <div class="role">프로덕트 매니저를 준비합니다</div>
+  <div class="role">Technical & Data-driven Product Manager</div>
 
   <div class="rule"></div>
 
   <!-- ========================================================= -->
-  <!-- 바꾸는 곳 3. 나를 한 문장으로. (어제 만든 "캐릭터 한 문장")     -->
+  <!-- 2. 나를 설명하는 한 문장                                     -->
   <!-- ========================================================= -->
   <p class="lead">
-    막힌 상황에서 원인을 정의하고, 실행 방식을 바꿔 실제 반응을 만들어 온 사람입니다.
+    막힌 상황에서 유저 반응의 원인을 정의하고, 엄밀한 논리와 데이터 기반 실행으로 문제를 해결해 온 프로덕트 매니저입니다.
   </p>
 
-  <h2>지금 하는 것</h2>
+  <!-- ========================================================= -->
+  <!-- 3. 현재 진행 중인 활동                                      -->
+  <!-- ========================================================= -->
+  <h2>지금 집중하는 것</h2>
   <ul>
-    <!-- ===================================================== -->
-    <!-- 바꾸는 곳 4. 목록 항목입니다.                            -->
-    <!-- <li> 한 덩어리가 한 줄입니다. 복사해서 늘리면 됩니다.       -->
-    <!-- ===================================================== -->
     <li>
-      <b>학습</b>
-      AI 프로덕트 매니저 트랙 (2026.07 - 2026.09)
+      <b>연구 & 도메인</b>
+      <strong>딥러닝 기반 밸런싱 자동화 프레임워크 연구 (숭실대 석사)</strong>
+      <div class="desc">인공신경망 대리모델과 역최적화(Inverse Optimization) 기법을 활용해 목표 수치에 부합하는 정밀 스탯을 산출하는 구조를 설계하고 있습니다.</div>
     </li>
     <li>
-      <b>관심</b>
-      결과물보다 과정을 남기는 일. 문제를 정의하고 실행으로 옮기는 구조.
+      <b>역량 강화</b>
+      <strong>AI 프로덕트 매니저 (AI PM) 트랙</strong>
+      <div class="desc">AI/ML 인프라와 기술 요소를 실무 프로덕트에 접목하여 유저 가치를 끌어올리는 문제 정의 및 제품 기획을 수행하고 있습니다.</div>
     </li>
   </ul>
 
-  <h2>기록</h2>
+  <!-- ========================================================= -->
+  <!-- 4. 주요 프로젝트 & 성과                                      -->
+  <!-- ========================================================= -->
+  <h2>주요 프로덕트 & 실행 성과</h2>
   <ul>
-    <!-- ===================================================== -->
-    <!-- 바꾸는 곳 5. 다른 페이지로 가는 링크입니다.                -->
-    <!-- career.html 파일을 만든 뒤에 살아납니다.                  -->
-    <!-- ===================================================== -->
-    <li><a href="career.html">경력 정리 →</a></li>
+    <li>
+      <b>Commercial Product PL</b>
+      <strong>스팀 상용화 게임 총괄 출시 ('In to the 029' & 'I am Sorry')</strong>
+      <div class="desc">기획 총괄(PL)로서 인디 퍼즐 호러 프로덕트의 런칭 및 운영 전 과정을 주도했습니다. 유저 플레이 데이터와 패턴을 분석하여 반복 루프 구조의 피로 원인을 파악하고, 차기작 맵 구조를 선형화하여 유저 이탈 요인을 개선했습니다.</div>
+    </li>
+    <li>
+      <b>B2B / B2G Enterprise PM</b>
+      <strong>코레일 철도 정비 VR & 공공기관 실감형 XR 시뮬레이터 PM</strong>
+      <div class="desc">코레일 신입 정비사용 VR 훈련 시뮬레이션 및 다수의 B2B/B2G 사업에서 PM/PL을 담당했습니다. 발주처 요구사항을 정밀한 요구사항 정의서와 UX 키매핑 구조로 치환하여 개발 병목을 해결했습니다.</div>
+    </li>
+    <li>
+      <b>AI & System Logic</b>
+      <strong>국제진료 STT-AI VR & 태권도 VR AI 파이프라인 설계</strong>
+      <div class="desc">STT 기반의 음성 인식·평가 대화 루프 시스템 및 6종의 무술 콘셉트별 AI 행동 패턴 확률 알고리즘을 구축하여 정교한 인터랙션 환경을 개발했습니다.</div>
+    </li>
   </ul>
 
+  <!-- ========================================================= -->
+  <!-- 5. 링크 및 기록                                             -->
+  <!-- ========================================================= -->
+  <h2>기록 & 연락처</h2>
+  <ul>
+    <li><a href="career.html">상세 경력 기술서 보기 →</a></li>
+    <li><a href="mailto:ym5567@naver.com">이메일 문의 (ym5567@naver.com) →</a></li>
+  </ul>
+
+  <!-- ========================================================= -->
+  <!-- 6. 푸터                                                   -->
+  <!-- ========================================================= -->
   <div class="foot">
-    <!-- 바꾸는 곳 6. 아래 날짜만 오늘로 바꾸면 됩니다. -->
-    2026.07.22 부터 기록합니다.
+    <span>2026.07.22 업데이트</span>
+    <span>이영민 | Product Manager</span>
   </div>
 
 </div>
