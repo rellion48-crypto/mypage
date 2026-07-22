@@ -240,6 +240,24 @@
     font-weight: 500;
   }
 
+  /* Project Image Grid & Styles */
+  .project-img-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+    margin: 16px 0 20px;
+  }
+
+  .project-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    display: block;
+    background-color: var(--bg-page);
+  }
+
   .bullet-points {
     list-style: none;
     margin-bottom: 20px;
@@ -333,6 +351,7 @@
     .hero h1 { font-size: 30px; }
     .hero .statement { font-size: 16px; }
     .project-card { padding: 20px; }
+    .project-img { height: 150px; }
     .contact-section { padding: 28px 20px; }
   }
 </style>
@@ -375,7 +394,7 @@
   <div class="section-title">Projects & Experience</div>
   <div class="timeline">
 
-    <!-- Card 1 -->
+    <!-- Card 1: Steam Games -->
     <article class="project-card">
       <div class="card-header">
         <span class="category-badge">B2C Commercial Product</span>
@@ -383,6 +402,13 @@
       </div>
       <h3>스팀 상용화 게임 총괄 출시 ('In to the 029' & 'I am Sorry')</h3>
       <p class="project-summary">인디 퍼즐 호러 프로덕트의 기획 총괄(PL)로서 초기 컨셉 기획부터 런칭 및 운영 전 과정을 리드했습니다.</p>
+      
+      <!-- 프로젝트 이미지 그리드 (In to the 029 / I am Sorry) -->
+      <div class="project-img-grid">
+        <img src="https://i.ibb.co/6JtY2y3H/intothe029.png" alt="In to the 029 게임 화면" class="project-img">
+        <img src="https://i.ibb.co/ZRVbmtkn/iamsorry.png" alt="I am Sorry 게임 화면" class="project-img">
+      </div>
+
       <ul class="bullet-points">
         <li><strong>유저 피로도 문제 정의 및 구조 개선:</strong> 전작 'In to the 029'의 병렬/반복 맵 구조에서 발견된 사용자 피로 문제를 분석해, 차기작 'I am Sorry'에서는 맵 구조를 선형화하고 기믹 상태 변화 중심으로 재설계하여 피로 이슈 재발을 방지했습니다.</li>
         <li><strong>라이브 서비스 및 운영:</strong> 스팀 런칭 후 유저 데이터 모니터링, 프로모션/할인 설정 및 글로벌 유저 피드백 수집 기반의 이슈 대응을 총괄했습니다.</li>
@@ -395,7 +421,7 @@
       </div>
     </article>
 
-    <!-- Card 2 -->
+    <!-- Card 2: Korail / Enterprise XR -->
     <article class="project-card">
       <div class="card-header">
         <span class="category-badge">B2B / B2G Enterprise PM</span>
@@ -403,6 +429,12 @@
       </div>
       <h3>코레일 철도 정비 VR & 공공기관 XR 시뮬레이터 사업 PM</h3>
       <p class="project-summary">코레일 신입 정비사용 XR 시뮬레이션 및 다수의 국가 가상훈련 콘텐츠 사업 PM/PL을 담당했습니다.</p>
+      
+      <!-- 코레일 프로젝트 이미지 -->
+      <div class="project-img-grid">
+        <img src="https://i.ibb.co/QFCJkZnb/korail.png" alt="코레일 VR 시뮬레이터 프로젝트 이미지" class="project-img">
+      </div>
+
       <ul class="bullet-points">
         <li><strong>이해관계자 요구사항 정의:</strong> 발주처 요구사항을 분석하여 개발/디자인 명세서, UX 키매핑 설계서, 운영자/사용자 매뉴얼로 치환했습니다.</li>
         <li><strong>학습 곡선 단축:</strong> 비숙련 직원의 직관적 진입을 고려한 UI/UX 로직을 설계하여 진입 장벽과 작업 오류율을 낮췄습니다.</li>
@@ -415,7 +447,7 @@
       </div>
     </article>
 
-    <!-- Card 3 -->
+    <!-- Card 3: AI Logic -->
     <article class="project-card">
       <div class="card-header">
         <span class="category-badge">AI & System Logic</span>
