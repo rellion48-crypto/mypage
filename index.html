@@ -61,10 +61,6 @@
         transform: translateX(-50%) translateY(0);
         opacity: 1;
     }
-    /* Accordion Custom Marker Hide */
-    details summary::-webkit-details-marker {
-        display:none;
-    }
 </style>
 
 <script id="tailwind-config">
@@ -165,11 +161,11 @@
 <nav class="fixed top-0 w-full z-50 bg-background/90 backdrop-blur-md border-b border-outline-variant">
 <div class="max-w-container-max mx-auto px-gutter flex justify-between items-center h-20">
 <a href="#" class="font-headline-sm text-headline-sm font-bold tracking-tight text-on-surface">LEE YEONGMIN</a>
-<div class="hidden md:flex gap-10 items-center">
+<div class="hidden md:flex gap-12 items-center">
 <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#expertise">핵심 역량</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#projects">프로젝트 &amp; 경력</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#faq">PM 리더십 Q&amp;A</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#projects">프로젝트 &amp; 성과</a>
 <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#research">연구 &amp; 학력</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#contact">연락처</a>
 </div>
 <button onclick="sendEmail()" class="font-label-caps text-label-caps border border-primary text-primary px-6 py-2 bg-primary/5 hover:bg-primary/10 transition-all duration-300">
     이메일 문의하기
@@ -185,17 +181,17 @@
 <span class="font-label-caps text-label-caps text-primary block">TECHNICAL PRODUCT MANAGER</span>
 <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface">
     이영민<br/>
-    <span class="text-2xl font-normal text-on-surface-variant block mt-2">데이터 로직과 엄밀한 시스템 설계</span>
+    <span class="text-2xl font-normal text-on-surface-variant block mt-2">엄밀한 문제 정의와 데이터 기반 시스템 구축</span>
 </h1>
 <p class="font-body-lg text-body-lg text-on-surface-variant border-l-2 border-primary pl-4">
-    모호함을 배제하고, 엄밀한 논리와 데이터 기반 실행으로 프로덕트의 구조적 본질을 증명합니다.
+    모호함을 배제하고, 현상의 주도적 문제 정의와 데이터·알고리즘 기반 실행으로 프로덕트의 구조적 본질을 증명합니다.
 </p>
 </div>
 
 <!-- 주요 이력 요약 (Career Snapshot) -->
 <div class="bg-surface-container border border-outline-variant p-8 relative overflow-hidden">
 <div class="relative z-10 space-y-6">
-<h2 class="font-headline-sm text-headline-sm text-primary">주요 이력 요약</h2>
+<h2 class="font-headline-sm text-headline-sm text-primary">Core Profile</h2>
 <div class="space-y-4">
 <div class="flex justify-between items-end">
 <span class="font-label-caps text-label-caps text-on-surface-variant">현재 소속</span>
@@ -203,13 +199,13 @@
 </div>
 <div class="fine-line"></div>
 <div class="flex justify-between items-end">
-<span class="font-label-caps text-label-caps text-on-surface-variant">주요 연구</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">학술 연구</span>
 <span class="font-body-md text-body-md font-bold text-right text-primary">TabNet 대리모델 &amp; 역최적화 밸런싱</span>
 </div>
 <div class="fine-line"></div>
 <div class="flex justify-between items-end">
-<span class="font-label-caps text-label-caps text-on-surface-variant">상용 출시</span>
-<span class="font-body-md text-body-md font-bold text-right">스팀 상용 게임 2건 출시 (기획 총괄)</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">End-to-End 오너십</span>
+<span class="font-body-md text-body-md font-bold text-right">스팀 상용 게임 2건 기획 총괄 및 라이브</span>
 </div>
 <div class="fine-line"></div>
 <div class="flex justify-between items-end">
@@ -224,50 +220,50 @@
 
 <!-- 핵심 역량 섹션 -->
 <section id="expertise" class="max-w-container-max mx-auto px-gutter py-section-gap">
-<h2 class="font-headline-md text-headline-md mb-element-gap">핵심 역량</h2>
+<h2 class="font-headline-md text-headline-md mb-element-gap">핵심 전문성 &amp; 일하는 방식</h2>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 <!-- 카드 1 -->
 <div class="bg-surface-container border border-outline-variant p-8 flex flex-col justify-between hover:border-primary/40 transition-colors duration-300">
 <div class="space-y-6">
-<span class="material-symbols-outlined text-primary text-4xl">insights</span>
-<h3 class="font-headline-sm text-headline-sm">데이터 &amp; 유저 중심 개선</h3>
+<span class="material-symbols-outlined text-primary text-4xl">travel_explore</span>
+<h3 class="font-headline-sm text-headline-sm">주도적 문제 정의 &amp; Outcome 도출</h3>
 <p class="font-body-md text-body-md text-on-surface-variant">
-    유저 피로도를 정성적 '느낌'이 아닌 세션 실패율·재시도·반복 동선 등 정량 구간으로 번역하고, 피드백 유형화를 통해 병목을 구조적으로 해결합니다.
+    주어지는 스펙 수동 구현에 그치지 않고, 유저 데이터와 현상에서 진짜 문제를 직접 진단합니다. 단순 기능 출시(Output)가 아닌 구조 개편을 통한 유저 이탈 방지 및 정량적/정성적 성과(Outcome)를 도출합니다.
 </p>
 </div>
 <div class="mt-8 pt-4 border-t border-outline-variant/50">
-<span class="font-metric-xl text-metric-xl text-primary block">스팀 상용화</span>
-<span class="font-label-caps text-label-caps text-on-surface-variant">기획 총괄(PL) 전 사이클 리드</span>
+<span class="font-metric-xl text-metric-xl text-primary block">Problem-First</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">유저 피로도 및 이탈 원인 구조적 해결</span>
 </div>
 </div>
 
 <!-- 카드 2 -->
 <div class="bg-surface-container border border-outline-variant p-8 flex flex-col justify-between hover:border-primary/40 transition-colors duration-300">
 <div class="space-y-6">
-<span class="material-symbols-outlined text-primary text-4xl">account_balance</span>
-<h3 class="font-headline-sm text-headline-sm">엔터프라이즈 PM &amp; 기획 명세화</h3>
+<span class="material-symbols-outlined text-primary text-4xl">schema</span>
+<h3 class="font-headline-sm text-headline-sm">가모호성 해소 &amp; Trade-off 최적화</h3>
 <p class="font-body-md text-body-md text-on-surface-variant">
-    발주처의 정책·안전 요구사항을 시나리오 단위로 분해하고, 명확한 조건·예외·성공 기준이 담긴 스펙과 UX 키매핑으로 정밀 전환합니다.
+    공공기관 및 B2B/B2G의 복잡하고 불명확한 환경을 시스템 기획서와 WBS로 정밀 명세화합니다. 리소스·일정 등 제약 속에서 단순 외형 확장이 아닌 기믹 로직 중심의 최적 솔루션을 설계합니다.
 </p>
 </div>
 <div class="mt-8 pt-4 border-t border-outline-variant/50">
-<span class="font-metric-xl text-metric-xl text-primary block">XR 시뮬레이터</span>
-<span class="font-label-caps text-label-caps text-on-surface-variant">코레일 및 B2G 사업 납품 완료</span>
+<span class="font-metric-xl text-metric-xl text-primary block">Specification</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">발주처-개발자-디자이너 Align 및 납품 완료</span>
 </div>
 </div>
 
 <!-- 카드 3 -->
 <div class="bg-surface-container border border-outline-variant p-8 flex flex-col justify-between hover:border-primary/40 transition-colors duration-300">
 <div class="space-y-6">
-<span class="material-symbols-outlined text-primary text-4xl">memory</span>
-<h3 class="font-headline-sm text-headline-sm">AI &amp; 시스템 구조화</h3>
+<span class="material-symbols-outlined text-primary text-4xl">psychology</span>
+<h3 class="font-headline-sm text-headline-sm">데이터 검증 &amp; 비판적 로직 설계</h3>
 <p class="font-body-md text-body-md text-on-surface-variant">
-    TabNet 대리모델과 역최적화(Inverse Optimization) 연구 등 최신 기술을 접목하되, MVP(최소 검증) 단계를 먼저 정의해 실무 리스크를 완벽히 통제합니다.
+    관성적·직관적 밸런싱 방식에 의문을 제기하고, TabNet 대리모델과 역최적화(Inverse Optimization)를 통해 수치 산출을 데이터 기반으로 객관화·자동화하는 정밀 프레임워크를 연구 및 구축합니다.
 </p>
 </div>
 <div class="mt-8 pt-4 border-t border-outline-variant/50">
-<span class="font-metric-xl text-metric-xl text-primary block">MVP 접근</span>
-<span class="font-label-caps text-label-caps text-on-surface-variant">단계적 확장 및 프레임워크 연구</span>
+<span class="font-metric-xl text-metric-xl text-primary block">Data-Driven</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">TabNet &amp; 역최적화 수치 자동화 프레임워크</span>
 </div>
 </div>
 </div>
@@ -276,7 +272,7 @@
 <!-- 주요 프로젝트 및 경력 섹션 -->
 <section id="projects" class="bg-surface-container-lowest border-t border-b border-outline-variant py-section-gap">
 <div class="max-w-container-max mx-auto px-gutter">
-<h2 class="font-headline-md text-headline-md mb-element-gap">주요 프로젝트 &amp; 경력 사항</h2>
+<h2 class="font-headline-md text-headline-md mb-element-gap">주요 프로젝트 &amp; 성과 (Featured Work)</h2>
 <div class="space-y-12">
 
 <!-- 프로젝트 1 -->
@@ -288,23 +284,23 @@
 <div class="p-8 md:p-10 flex-1 space-y-6">
 <div class="flex justify-between items-start flex-wrap gap-2">
 <div>
-    <span class="font-label-caps text-label-caps text-primary block mb-1">B2C 상용 프로덕트 (2022.01 - 2024.08)</span>
+    <span class="font-label-caps text-label-caps text-primary block mb-1">B2C COMMERCIAL PRODUCT (2022.01 - 2024.08)</span>
     <h3 class="font-headline-sm text-headline-sm text-on-surface">스팀 상용화 게임 총괄 출시 ('In to the 029' &amp; 'I am Sorry')</h3>
 </div>
 <span class="font-label-caps text-label-caps bg-surface-variant px-3 py-1 text-primary border border-outline-variant">기획 총괄 (PL)</span>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 <div class="space-y-1">
-<span class="font-label-caps text-label-caps text-on-surface-variant">문제 정의 (Q2, Q3)</span>
-<p class="font-body-md text-body-md text-sm">전작 'In to the 029'에서 발견된 반복 동선 및 진행 정체 지점으로 인한 유저 피로도 및 이탈 가중.</p>
+<span class="font-label-caps text-label-caps text-on-surface-variant">문제 정의 (Problem)</span>
+<p class="font-body-md text-body-md text-sm">전작 'In to the 029'의 유저 데이터 및 피드백 분석을 통해 '병렬/반복 맵 구조로 인한 유저 피로도 및 이탈'이라는 구조적 문제를 스스로 직접 진단함.</p>
 </div>
 <div class="space-y-1">
-<span class="font-label-caps text-label-caps text-on-surface-variant">수행 역할 (Q2, Q4)</span>
-<p class="font-body-md text-body-md text-sm">차기작 'I am Sorry' 맵 선형화 및 기믹 재설계, 스팀 라이브 운영(유입 대비 이탈율 및 리뷰/평판 모니터링) 총괄.</p>
+<span class="font-label-caps text-label-caps text-on-surface-variant">해결 방안 &amp; Trade-off</span>
+<p class="font-body-md text-body-md text-sm">무작정 볼륨을 확장하는 대신 맵 구조 선형화 및 기믹 상태 변화 중심 재설계로 리소스 제약 속에서 피로도 완화와 몰입감 유지를 동시 달성.</p>
 </div>
 <div class="space-y-1">
-<span class="font-label-caps text-label-caps text-on-surface-variant">성과 및 결과 (Q10)</span>
-<p class="font-body-md text-body-md text-sm text-primary font-bold">유저 불만 카테고리화 분석을 통해 구조적 문제 해결, 스팀 성공적 런칭 및 장기 평판/안정성 확보.</p>
+<span class="font-label-caps text-label-caps text-on-surface-variant">성과 및 End-to-End</span>
+<p class="font-body-md text-body-md text-sm text-primary font-bold">차기작 유저 피로도 구조적 해결. 스팀 글로벌 런칭부터 프로모션, 라이브 이슈 대응, 리뷰 평판 모니터링 체계 구축까지 전 생애주기 총괄.</p>
 </div>
 </div>
 <div class="flex flex-wrap gap-3 pt-2">
@@ -331,23 +327,23 @@
 <div class="p-8 md:p-10 flex-1 space-y-6">
 <div class="flex justify-between items-start flex-wrap gap-2">
 <div>
-    <span class="font-label-caps text-label-caps text-primary block mb-1">B2B / B2G 엔터프라이즈 PM (2022.10 - 2025.09)</span>
+    <span class="font-label-caps text-label-caps text-primary block mb-1">B2B / B2G ENTERPRISE PM (2022.10 - 2025.09)</span>
     <h3 class="font-headline-sm text-headline-sm text-on-surface">코레일 철도 정비 VR &amp; 공공기관 XR 시뮬레이터 사업 PM</h3>
 </div>
 <span class="font-label-caps text-label-caps bg-surface-variant px-3 py-1 text-primary border border-outline-variant">프로젝트 매니저 (PM)</span>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 <div class="space-y-1">
-<span class="font-label-caps text-label-caps text-on-surface-variant">문제 정의 (Q5)</span>
-<p class="font-body-md text-body-md text-sm">공공기관 요구사항 특유의 정책/안전 관행과 결합된 모호성 해결 및 구현 가능 명세화 필요.</p>
+<span class="font-label-caps text-label-caps text-on-surface-variant">가모호성 해소 (Clarity)</span>
+<p class="font-body-md text-body-md text-sm">정책·안전·교육 관행과 결합되어 불명확한 B2G 요구사항을 개발·디자인 팀이 정밀히 이해할 수 있는 시스템 기획서, UX 키매핑 설계서로 전환.</p>
 </div>
 <div class="space-y-1">
-<span class="font-label-caps text-label-caps text-on-surface-variant">수행 역할 (Q6, Q7)</span>
-<p class="font-body-md text-body-md text-sm">요구사항 시나리오 분해, 기능명세서·UX 키매핑·WBS 구축, 쟁점 중심 크로스 펑셔널 커뮤니케이션 리딩.</p>
+<span class="font-label-caps text-label-caps text-on-surface-variant">이해관계자 리딩</span>
+<p class="font-body-md text-body-md text-sm">발주처-개발자-디자이너 간 목표를 Align시키고, 회의 안건을 담당/기한/검수 기준 기반으로 정리하여 크로스 펑셔널 커뮤니케이션 리딩.</p>
 </div>
 <div class="space-y-1">
-<span class="font-label-caps text-label-caps text-on-surface-variant">성과 및 결과 (Q8)</span>
-<p class="font-body-md text-body-md text-sm text-primary font-bold">용어·예외·성공 기준 정밀 정의로 개발 오차 최소화, 학습 곡선 단축 및 사업 최종 납품 승인.</p>
+<span class="font-label-caps text-label-caps text-on-surface-variant">실질 성과 (Outcome)</span>
+<p class="font-body-md text-body-md text-sm text-primary font-bold">비숙련 정비사의 학습 곡선 단축 및 정비 작업 오류율 실질적 감소 달성, 발주처 최종 납품 완수.</p>
 </div>
 </div>
 <div class="flex flex-wrap gap-3 pt-2">
@@ -363,139 +359,18 @@
 </div>
 </section>
 
-<!-- 신규 추가: PM Leadership FAQ Section (10개 질문 완벽 반영) -->
-<section id="faq" class="max-w-container-max mx-auto px-gutter py-section-gap">
-<div class="space-y-4 mb-element-gap">
-    <span class="font-label-caps text-label-caps text-primary block">HIRING MANAGER EVALUATION GUIDELINE</span>
-    <h2 class="font-headline-md text-headline-md">PM 리더십 &amp; 실무 철학 Q&amp;A</h2>
-    <p class="font-body-md text-body-md text-on-surface-variant">목적 조직 채용 책임자의 검증 기준에 맞춘 실무 응답 아카이브입니다. 각 질문을 클릭하여 상세 답변을 확인하실 수 있습니다.</p>
-</div>
-
-<div class="space-y-4">
-    <!-- Q1 -->
-    <details class="group bg-surface-container border border-outline-variant rounded-lg p-6 transition-colors duration-200 hover:border-primary/40">
-        <summary class="flex justify-between items-center cursor-pointer font-headline-sm text-headline-sm text-lg text-on-surface select-none">
-            <span>1. ‘모호함을 배제하고 엄밀한 시스템 설계’가 실제 업무에서 어떤 의미였나요?</span>
-            <span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform duration-300">expand_more</span>
-        </summary>
-        <div class="mt-4 pt-4 border-t border-outline-variant/60 font-body-md text-body-md text-on-surface-variant leading-relaxed">
-            요구사항/문제를 “감”이 아니라 측정 가능한 변수와 조건으로 정의하는 걸 의미합니다. 예를 들어 유저 피로도 문제를 단순히 “재미없다”로 두지 않고, 반복 동선/병렬 구조/재시도 구간 같은 구조 요인과 이탈 지점을 데이터/피드백으로 연결해 설계 변경으로 해결했습니다.
-        </div>
-    </details>
-
-    <!-- Q2 -->
-    <details class="group bg-surface-container border border-outline-variant rounded-lg p-6 transition-colors duration-200 hover:border-primary/40">
-        <summary class="flex justify-between items-center cursor-pointer font-headline-sm text-headline-sm text-lg text-on-surface select-none">
-            <span>2. 스팀 게임 2건 출시에서 본인의 역할과 책임 범위는 어디까지였나요?</span>
-            <span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform duration-300">expand_more</span>
-        </summary>
-        <div class="mt-4 pt-4 border-t border-outline-variant/60 font-body-md text-body-md text-on-surface-variant leading-relaxed">
-            두 프로젝트 모두 기획 총괄(PL)로서 <strong>문제 정의 → 맵/시스템 설계 → 개발·아트 협업 명세 → 출시 준비 및 라이브 운영(할인/프로모션/이슈 대응)</strong>까지 전 사이클을 책임졌습니다.
-        </div>
-    </details>
-
-    <!-- Q3 -->
-    <details class="group bg-surface-container border border-outline-variant rounded-lg p-6 transition-colors duration-200 hover:border-primary/40">
-        <summary class="flex justify-between items-center cursor-pointer font-headline-sm text-headline-sm text-lg text-on-surface select-none">
-            <span>3. “데이터 기반 개선”을 말할 때 실제로 어떤 데이터를 검토했나요?</span>
-            <span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform duration-300">expand_more</span>
-        </summary>
-        <div class="mt-4 pt-4 border-t border-outline-variant/60 font-body-md text-body-md text-on-surface-variant leading-relaxed">
-            정량이 가능하면 플레이 세션/구간별 실패·재시도/진행 정체 구간 등을 보고, 정량이 어려운 영역은 리뷰·커뮤니티 피드백을 <strong>유형화(불만 카테고리화)</strong>해서 병목 구간과 연결했습니다. 핵심은 “느낌”을 구조/구간 단위의 문제로 번역하는 것입니다.
-        </div>
-    </details>
-
-    <!-- Q4 -->
-    <details class="group bg-surface-container border border-outline-variant rounded-lg p-6 transition-colors duration-200 hover:border-primary/40">
-        <summary class="flex justify-between items-center cursor-pointer font-headline-sm text-headline-sm text-lg text-on-surface select-none">
-            <span>4. 라이브 운영에서 가장 중요하게 본 지표와 체크포인트는 무엇이었나요?</span>
-            <span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform duration-300">expand_more</span>
-        </summary>
-        <div class="mt-4 pt-4 border-t border-outline-variant/60 font-body-md text-body-md text-on-surface-variant leading-relaxed">
-            업데이트/할인/프로모션 시점에는 유입 대비 이탈 구간 변화, 리뷰 톤 변화, 크리티컬 버그 발생 빈도 같은 운영 지표를 우선 확인합니다. 단기 매출도 보지만, 장기적으로는 평판(리뷰)과 안정성이 더 중요한 레버라고 봤습니다.
-        </div>
-    </details>
-
-    <!-- Q5 -->
-    <details class="group bg-surface-container border border-outline-variant rounded-lg p-6 transition-colors duration-200 hover:border-primary/40">
-        <summary class="flex justify-between items-center cursor-pointer font-headline-sm text-headline-sm text-lg text-on-surface select-none">
-            <span>5. 엔터프라이즈(B2B/B2G) PM 환경에서 가장 어려웠던 점과 극복 방식은?</span>
-            <span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform duration-300">expand_more</span>
-        </summary>
-        <div class="mt-4 pt-4 border-t border-outline-variant/60 font-body-md text-body-md text-on-surface-variant leading-relaxed">
-            요구사항이 “기능”이 아니라 정책/안전/교육 절차/현장 관행과 결합돼 있어 모호성이 커진다는 점입니다. 그래서 제가 가장 공들인 것은 발주처 언어를 개발 가능한 스펙으로 번역하는 작업이었습니다.
-        </div>
-    </details>
-
-    <!-- Q6 -->
-    <details class="group bg-surface-container border border-outline-variant rounded-lg p-6 transition-colors duration-200 hover:border-primary/40">
-        <summary class="flex justify-between items-center cursor-pointer font-headline-sm text-headline-sm text-lg text-on-surface select-none">
-            <span>6. 코레일 VR/XR 프로젝트에서 요구사항을 어떻게 명세화했나요?</span>
-            <span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform duration-300">expand_more</span>
-        </summary>
-        <div class="mt-4 pt-4 border-t border-outline-variant/60 font-body-md text-body-md text-on-surface-variant leading-relaxed">
-            먼저 발주처 요구를 시나리오/업무흐름 단위로 분해한 뒤, 개발·디자인 팀이 오해 없이 구현할 수 있도록 <strong>기능 정의서 + UX 키매핑 설계 + 매뉴얼 + WBS</strong> 형태로 정밀하게 문서화했습니다.
-        </div>
-    </details>
-
-    <!-- Q7 -->
-    <details class="group bg-surface-container border border-outline-variant rounded-lg p-6 transition-colors duration-200 hover:border-primary/40">
-        <summary class="flex justify-between items-center cursor-pointer font-headline-sm text-headline-sm text-lg text-on-surface select-none">
-            <span>7. 개발자·디자이너·발주처 사이 커뮤니케이션은 어떻게 리딩했나요?</span>
-            <span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform duration-300">expand_more</span>
-        </summary>
-        <div class="mt-4 pt-4 border-t border-outline-variant/60 font-body-md text-body-md text-on-surface-variant leading-relaxed">
-            회의에서 합의해야 할 것을 “의견”으로 끝내지 않고, 항상 결정 사항/미결 사항/다음 액션/담당/기한으로 남겼습니다. 그리고 쟁점은 ‘취향’이 아니라 리스크/일정/검수 기준 관점에서 정리해 합의를 끌어냈습니다.
-        </div>
-    </details>
-
-    <!-- Q8 -->
-    <details class="group bg-surface-container border border-outline-variant rounded-lg p-6 transition-colors duration-200 hover:border-primary/40">
-        <summary class="flex justify-between items-center cursor-pointer font-headline-sm text-headline-sm text-lg text-on-surface select-none">
-            <span>8. 기획 문서화(Specification)에서 가장 중요하게 생각하는 원칙은?</span>
-            <span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform duration-300">expand_more</span>
-        </summary>
-        <div class="mt-4 pt-4 border-t border-outline-variant/60 font-body-md text-body-md text-on-surface-variant leading-relaxed">
-            “읽는 사람이 구현/검수할 수 있어야 한다”입니다. 그래서 문서에는 <strong>용어 정의</strong>(같은 단어를 다르게 이해하지 않도록), <strong>조건/예외/경계값</strong>, <strong>성공 기준</strong>(검수 관점)을 반드시 포함했습니다.
-        </div>
-    </details>
-
-    <!-- Q9 -->
-    <details class="group bg-surface-container border border-outline-variant rounded-lg p-6 transition-colors duration-200 hover:border-primary/40">
-        <summary class="flex justify-between items-center cursor-pointer font-headline-sm text-headline-sm text-lg text-on-surface select-none">
-            <span>9. AI 연구를 병행하는 PM의 약점/리스크는 무엇이고 어떻게 보완하나요?</span>
-            <span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform duration-300">expand_more</span>
-        </summary>
-        <div class="mt-4 pt-4 border-t border-outline-variant/60 font-body-md text-body-md text-on-surface-variant leading-relaxed">
-            기술적 가능성에 집중하다가 일정/운영 현실을 놓치면 리스크가 됩니다. 그래서 저는 항상 “기술적 최선”과 별도로 <strong>MVP 기준(최소 검증)</strong>을 먼저 두고, 단계적으로 확장하는 방식으로 리스크를 관리합니다.
-        </div>
-    </details>
-
-    <!-- Q10 -->
-    <details class="group bg-surface-container border border-outline-variant rounded-lg p-6 transition-colors duration-200 hover:border-primary/40">
-        <summary class="flex justify-between items-center cursor-pointer font-headline-sm text-headline-sm text-lg text-on-surface select-none">
-            <span>10. “구조적 문제를 해결했다”는 것을 어떻게 증명하나요?</span>
-            <span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform duration-300">expand_more</span>
-        </summary>
-        <div class="mt-4 pt-4 border-t border-outline-variant/60 font-body-md text-body-md text-on-surface-variant leading-relaxed">
-            (1) 문제를 구간/조건으로 분해해 원인을 특정하고, (2) 설계 변경을 최소 단위로 적용한 뒤, (3) 이탈/피로 신호가 나타나는 지점이 실제로 개선되는지 확인합니다. 정량이 어려우면 리뷰/피드백의 불만 유형 분포 변화라도 추적해서 근거를 남깁니다.
-        </div>
-    </details>
-</div>
-</section>
-
 <!-- 학력 및 기술 역량 섹션 -->
-<section id="research" class="max-w-container-max mx-auto px-gutter py-section-gap border-t border-outline-variant">
+<section id="research" class="max-w-container-max mx-auto px-gutter py-section-gap">
 <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
 <div class="md:col-span-5 space-y-8">
-<h2 class="font-headline-md text-headline-md">학력 &amp; 연구 실적</h2>
+<h2 class="font-headline-md text-headline-md">학력 &amp; 도메인 적응력 (Adaptability)</h2>
 
 <div class="space-y-6">
 <div class="bg-surface-container border border-outline-variant p-6 space-y-2">
 <span class="font-label-caps text-label-caps text-primary">석사 재학 | 2024.09 - 현재</span>
 <h3 class="font-headline-sm text-headline-sm text-on-surface text-lg">숭실대학교 대학원 AI테크노융합학과</h3>
 <p class="font-body-md text-body-md text-sm text-on-surface-variant">
-    <strong>연구 주제:</strong> TabNet 대리모델(Surrogate Model)과 역최적화(Inverse Optimization), 경사하강법 기반의 밸런싱 자동화 프레임워크 연구. 데이터 기반 수치 생성 및 자동화 로직 구축.
+    <strong>연구 주제:</strong> TabNet 대리모델(Surrogate Model)과 역최적화(Inverse Optimization), 경사하강법 기반의 밸런싱 자동화 프레임워크 연구. 기존 수동/직관적 밸런싱 방식 대신 데이터 기반 수치 자동 산출 로직 구축.
 </p>
 </div>
 
@@ -506,39 +381,41 @@
     게임 시스템 기획, 콘텐츠 개발 및 멀티미디어 공학 전반 이수.
 </p>
 </div>
+
+<div class="p-4 bg-surface-container-high border-l-2 border-primary text-xs text-on-surface-variant">
+    B2C 스팀 게임 $\rightarrow$ B2G VR/XR 시뮬레이터 $\rightarrow$ AI/데이터 로직 연구로 이어지는 신속한 도메인 습득 및 실행력을 보유하고 있습니다.
+</div>
 </div>
 </div>
 
 <div class="md:col-span-7 space-y-8">
-<h2 class="font-headline-md text-headline-md">보유 기술 &amp; 전문성</h2>
+<h2 class="font-headline-md text-headline-md">기술적 깊이 &amp; 전문 스택 (Technical Depth)</h2>
 <div class="space-y-8">
 <div class="space-y-3">
-<h4 class="font-label-caps text-label-caps text-primary">프로덕트 &amp; 게임 시스템</h4>
+<h4 class="font-label-caps text-label-caps text-primary">SYSTEMS DESIGN &amp; OPERATIONS</h4>
 <ul class="space-y-2">
-<li class="font-body-md text-body-md"><span class="custom-bullet"></span>레벨 디자인 &amp; 맵 구조 흐름 최적화</li>
-<li class="font-body-md text-body-md"><span class="custom-bullet"></span>수치 밸런싱 &amp; 방어력 감소 공식 시스템 설계</li>
-<li class="font-body-md text-body-md"><span class="custom-bullet"></span>UX 키매핑 &amp; 유저 경험 병목 최소화</li>
-<li class="font-body-md text-body-md"><span class="custom-bullet"></span>스팀 글로벌 라이브 운영, 가격 정책 및 데이터 모니터링</li>
+<li class="font-body-md text-body-md"><span class="custom-bullet"></span>유저 이탈 구간 데이터 진단 및 레벨 디자인 흐름 구조 최적화</li>
+<li class="font-body-md text-body-md"><span class="custom-bullet"></span>수치 안정성 및 확장성을 고려한 방어력 감소 공식 설계</li>
+<li class="font-body-md text-body-md"><span class="custom-bullet"></span>스팀 글로벌 라이브 운영, 프로모션 대응 및 리뷰/평판 모니터링</li>
 </ul>
 <div class="fine-line"></div>
 </div>
 
 <div class="space-y-3">
-<h4 class="font-label-caps text-label-caps text-primary">AI &amp; 엔진 기술</h4>
+<h4 class="font-label-caps text-label-caps text-primary">PROTOTYPING &amp; AI TECH</h4>
 <ul class="space-y-2">
-<li class="font-body-md text-body-md"><span class="custom-bullet"></span>TabNet 대리모델 학습 &amp; 경사하강법 기반 최적화</li>
-<li class="font-body-md text-body-md"><span class="custom-bullet"></span>역최적화(Inverse Optimization) 프레임워크 구축</li>
-<li class="font-body-md text-body-md"><span class="custom-bullet"></span>Python / Pygame / Godot 엔진 프로토타이핑</li>
-<li class="font-body-md text-body-md"><span class="custom-bullet"></span>STT 음성인식 연동 &amp; 캐릭터 AI 행동 로직 설계</li>
+<li class="font-body-md text-body-md"><span class="custom-bullet"></span>Python, Pygame, Godot 엔진 기반 수치/인터랙션 직접 프로토타이핑</li>
+<li class="font-body-md text-body-md"><span class="custom-bullet"></span>TabNet 대리모델 학습 &amp; 경사하강법 기반 역최적화 프레임워크 연구</li>
+<li class="font-body-md text-body-md"><span class="custom-bullet"></span>STT 음성인식 파이프라인 연동 &amp; AI 캐릭터 행동 로직 설계</li>
 </ul>
 <div class="fine-line"></div>
 </div>
 
 <div class="space-y-3">
-<h4 class="font-label-caps text-label-caps text-primary">사업 및 프로젝트 관리</h4>
+<h4 class="font-label-caps text-label-caps text-primary">CROSS-FUNCTIONAL LEADERSHIP</h4>
 <ul class="space-y-2">
-<li class="font-body-md text-body-md"><span class="custom-bullet"></span>B2B / B2G 발주처 요구사항 명세화 &amp; WBS 관리</li>
-<li class="font-body-md text-body-md"><span class="custom-bullet"></span>개발자·디자이너·발주처 간의 크로스 커뮤니케이션 리딩</li>
+<li class="font-body-md text-body-md"><span class="custom-bullet"></span>B2B/B2G 발주처 요구사항의 정밀 시스템 명세화(Spec) 및 WBS 관리</li>
+<li class="font-body-md text-body-md"><span class="custom-bullet"></span>용어 정의, 경계값, 예외 처리, 성공 기준 중심의 정밀 문서화 원칙 준수</li>
 </ul>
 <div class="fine-line"></div>
 </div>
