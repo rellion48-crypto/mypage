@@ -1,880 +1,355 @@
-<!doctype html>
-<html lang="ko">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>이영민 | Technical Product Manager</title>
+<!DOCTYPE html>
 
-<!-- Open Graph (SEO / 소셜 공유) -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="이영민 | Technical Product Manager">
-<meta property="og:description" content="모호함을 배제하고, 엄밀한 논리와 데이터 기반 실행으로 프로덕트의 구조적 본질을 증명합니다.">
-<meta property="og:image" content="https://i.ibb.co/6JtY2y3H/intothe029.png">
-<meta property="og:url" content="https://rellion48-crypto.github.io/mypage/">
-
-<!-- Pretendard Font CDN -->
-<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
-
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Executive Dossier | Game Product Management</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <style>
-  :root {
-    --bg-page: #f8fafc;
-    --bg-card: #ffffff;
-    --text-primary: #0f172a;
-    --text-secondary: #334155;
-    --text-muted: #64748b;
-    --accent: #2563eb;
-    --accent-hover: #1d4ed8;
-    --accent-light: #eff6ff;
-    --steam-color: #171a21;
-    --steam-hover: #2a475e;
-    --border: #e2e8f0;
-    --border-hover: #cbd5e1;
-    --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.06);
-    --shadow-md: 0 4px 14px -2px rgb(0 0 0 / 0.08), 0 2px 6px -2px rgb(0 0 0 / 0.04);
-    --shadow-lg: 0 12px 30px -5px rgb(0 0 0 / 0.12);
-  }
-
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-
-  html {
-    scroll-behavior: smooth;
-  }
-
-  body {
-    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
-    color: var(--text-primary);
-    background-color: var(--bg-page);
-    line-height: 1.65;
-    word-break: keep-all;
-    -webkit-font-smoothing: antialiased;
-    overflow-x: hidden;
-  }
-
-  /* Sticky Navigation */
-  .navbar {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: rgba(255, 255, 255, 0.88);
-    backdrop-filter: blur(16px);
-    border-bottom: 1px solid var(--border);
-    transition: all 0.3s ease;
-  }
-
-  .nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 16px 32px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .nav-logo {
-    font-size: 16px;
-    font-weight: 800;
-    color: var(--text-primary);
-    text-decoration: none;
-    letter-spacing: -0.02em;
-  }
-
-  .nav-links {
-    display: flex;
-    gap: 28px;
-  }
-
-  .nav-links a {
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--text-muted);
-    text-decoration: none;
-    transition: color 0.2s ease;
-  }
-
-  .nav-links a:hover {
-    color: var(--accent);
-  }
-
-  /* Wide Main Container */
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 32px 96px;
-  }
-
-  /* Header Hero Section */
-  .hero {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 28px;
-    padding: 56px 48px;
-    box-shadow: var(--shadow-sm);
-    margin-bottom: 40px;
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-
-  .hero:hover {
-    box-shadow: var(--shadow-md);
-  }
-
-  .badge-status {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--accent);
-    background: var(--accent-light);
-    padding: 6px 14px;
-    border-radius: 20px;
-    margin-bottom: 20px;
-    border: 1px solid rgba(37, 99, 235, 0.15);
-  }
-
-  .badge-status::before {
-    content: "";
-    width: 7px;
-    height: 7px;
-    background-color: var(--accent);
-    border-radius: 50%;
-  }
-
-  .hero h1 {
-    font-size: 44px;
-    font-weight: 800;
-    letter-spacing: -0.03em;
-    color: var(--text-primary);
-    margin-bottom: 6px;
-  }
-
-  .hero .role {
-    font-size: 22px;
-    font-weight: 700;
-    color: var(--text-muted);
-    margin-bottom: 24px;
-  }
-
-  .hero .statement {
-    font-size: 18px;
-    font-weight: 500;
-    color: var(--text-secondary);
-    line-height: 1.75;
-    border-left: 4px solid var(--accent);
-    padding-left: 20px;
-    margin-top: 16px;
-  }
-
-  .hero-actions {
-    display: flex;
-    gap: 14px;
-    margin-top: 36px;
-    flex-wrap: wrap;
-  }
-
-  /* Buttons */
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 14px;
-    font-weight: 700;
-    padding: 12px 22px;
-    border-radius: 12px;
-    text-decoration: none;
-    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-    cursor: pointer;
-    border: none;
-  }
-
-  .btn-primary {
-    background: var(--accent);
-    color: #ffffff;
-    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
-  }
-
-  .btn-primary:hover {
-    background: var(--accent-hover);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 18px rgba(37, 99, 235, 0.35);
-  }
-
-  .btn-secondary {
-    background: #ffffff;
-    color: var(--text-secondary);
-    border: 1px solid var(--border);
-  }
-
-  .btn-secondary:hover {
-    background: var(--bg-page);
-    border-color: var(--border-hover);
-    color: var(--text-primary);
-    transform: translateY(-3px);
-  }
-
-  /* Button Styles for Steam and Documents */
-  .doc-btn-group {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 18px;
-  }
-
-  .btn-doc {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--accent);
-    background: var(--accent-light);
-    border: 1px solid rgba(37, 99, 235, 0.2);
-    padding: 9px 16px;
-    border-radius: 10px;
-    text-decoration: none;
-    transition: all 0.2s ease;
-  }
-
-  .btn-doc:hover {
-    background: var(--accent);
-    color: #ffffff;
-    transform: translateY(-2px);
-  }
-
-  .btn-steam {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 13px;
-    font-weight: 700;
-    color: #ffffff;
-    background: var(--steam-color);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 9px 16px;
-    border-radius: 10px;
-    text-decoration: none;
-    transition: all 0.2s ease;
-  }
-
-  .btn-steam:hover {
-    background: var(--steam-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  }
-
-  /* Section Title */
-  .section-title {
-    font-size: 13px;
-    font-weight: 800;
-    letter-spacing: 0.1em;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    margin: 64px 0 24px;
-    display: flex;
-    align-items: center;
-    gap: 16px;
-  }
-
-  .section-title::after {
-    content: "";
-    flex: 1;
-    height: 1px;
-    background: var(--border);
-  }
-
-  /* Core Competencies Grid (3-Columns) */
-  .competency-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-
-  .comp-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    padding: 28px;
-    box-shadow: var(--shadow-sm);
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-
-  .comp-card:hover {
-    border-color: var(--border-hover);
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-md);
-  }
-
-  .comp-card h3 {
-    font-size: 17px;
-    font-weight: 700;
-    color: var(--text-primary);
-    margin-bottom: 10px;
-  }
-
-  .comp-card p {
-    font-size: 14px;
-    color: var(--text-muted);
-    line-height: 1.65;
-  }
-
-  /* Timeline & Projects (Full Width Layout) */
-  .timeline {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-  }
-
-  .project-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 24px;
-    padding: 36px 40px;
-    box-shadow: var(--shadow-sm);
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-
-  .project-card:hover {
-    border-color: var(--border-hover);
-    box-shadow: var(--shadow-md);
-  }
-
-  .card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-bottom: 14px;
-  }
-
-  .category-badge {
-    font-size: 12px;
-    font-weight: 700;
-    color: var(--accent);
-    background: var(--accent-light);
-    padding: 5px 12px;
-    border-radius: 8px;
-    border: 1px solid rgba(37, 99, 235, 0.15);
-  }
-
-  .period {
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--text-muted);
-  }
-
-  .project-card h3 {
-    font-size: 22px;
-    font-weight: 800;
-    color: var(--text-primary);
-    margin-bottom: 10px;
-  }
-
-  .project-summary {
-    font-size: 15px;
-    color: var(--text-secondary);
-    margin-bottom: 20px;
-    font-weight: 500;
-  }
-
-  /* Project Image Grid & Styles */
-  .project-img-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-    margin: 20px 0 24px;
-  }
-
-  .project-img-wrapper {
-    overflow: hidden;
-    border-radius: 14px;
-    border: 1px solid var(--border);
-    height: 220px;
-  }
-
-  .project-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    background-color: var(--bg-page);
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-
-  .project-img-wrapper:hover .project-img {
-    transform: scale(1.05);
-  }
-
-  .bullet-points {
-    list-style: none;
-    margin-bottom: 20px;
-  }
-
-  .bullet-points li {
-    position: relative;
-    padding-left: 22px;
-    font-size: 14px;
-    color: var(--text-secondary);
-    margin-bottom: 10px;
-    line-height: 1.65;
-  }
-
-  .bullet-points li::before {
-    content: "•";
-    position: absolute;
-    left: 4px;
-    color: var(--accent);
-    font-weight: bold;
-    font-size: 18px;
-  }
-
-  .tag-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    padding-top: 20px;
-    border-top: 1px dashed var(--border);
-  }
-
-  .tag {
-    font-size: 12px;
-    font-weight: 600;
-    color: var(--text-muted);
-    background: var(--bg-page);
-    padding: 5px 12px;
-    border-radius: 8px;
-    border: 1px solid var(--border);
-  }
-
-  /* Key Documents Box (2 Columns) */
-  .doc-card-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-
-  .doc-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    padding: 28px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-shadow: var(--shadow-sm);
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-
-  .doc-card:hover {
-    border-color: var(--border-hover);
-    box-shadow: var(--shadow-md);
-    transform: translateY(-3px);
-  }
-
-  .doc-card-info h4 {
-    font-size: 17px;
-    font-weight: 700;
-    color: var(--text-primary);
-    margin-bottom: 8px;
-  }
-
-  .doc-card-info p {
-    font-size: 14px;
-    color: var(--text-muted);
-    margin-bottom: 20px;
-    line-height: 1.6;
-  }
-
-  /* Contact Box */
-  .contact-section {
-    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-    color: #ffffff;
-    border-radius: 28px;
-    padding: 56px 48px;
-    margin-top: 64px;
-    text-align: center;
-    box-shadow: var(--shadow-lg);
-  }
-
-  .contact-section h3 {
-    font-size: 26px;
-    font-weight: 800;
-    margin-bottom: 12px;
-  }
-
-  .contact-section p {
-    font-size: 16px;
-    color: #94a3b8;
-    margin-bottom: 32px;
-  }
-
-  .contact-btn {
-    display: inline-block;
-    background: #ffffff;
-    color: #0f172a;
-    font-size: 15px;
-    font-weight: 700;
-    padding: 14px 32px;
-    border-radius: 14px;
-    text-decoration: none;
-    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-    cursor: pointer;
-    border: none;
-  }
-
-  .contact-btn:hover {
-    background: #f1f5f9;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 18px rgba(255, 255, 255, 0.25);
-  }
-
-  /* Toast Notification */
-  .toast {
-    position: fixed;
-    bottom: 36px;
-    left: 50%;
-    transform: translateX(-50%) translateY(100px);
-    background-color: #0f172a;
-    color: #ffffff;
-    padding: 14px 28px;
-    border-radius: 50px;
-    font-size: 14px;
-    font-weight: 600;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
-    opacity: 0;
-    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-    z-index: 1000;
-    pointer-events: none;
-  }
-
-  .toast.show {
-    transform: translateX(-50%) translateY(0);
-    opacity: 1;
-  }
-
-  /* Footer */
-  footer {
-    margin-top: 56px;
-    text-align: center;
-    font-size: 13px;
-    color: var(--text-muted);
-  }
-
-  /* Scroll-Triggered Fade Motion */
-  .fade-in-up {
-    opacity: 0;
-    transform: translateY(24px);
-    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-
-  .fade-in-up.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* Responsive Design */
-  @media (max-width: 992px) {
-    .competency-grid { grid-template-columns: 1fr; }
-    .doc-card-grid { grid-template-columns: 1fr; }
-    .project-img-grid { grid-template-columns: 1fr; }
-    .project-img-wrapper { height: 180px; }
-  }
-
-  @media (max-width: 600px) {
-    .nav-links { display: none; }
-    .container { padding: 24px 16px 64px; }
-    .hero { padding: 32px 24px; }
-    .hero h1 { font-size: 32px; }
-    .hero .statement { font-size: 15px; }
-    .project-card { padding: 24px 20px; }
-    .contact-section { padding: 36px 20px; }
-    .doc-btn-group { flex-direction: column; }
-  }
-
-  /* Print Styles */
-  @media print {
-    .navbar, .hero-actions, .btn-doc, .btn-steam, .contact-section {
-      display: none !important;
-    }
-    body { background: #ffffff; color: #000000; }
-    .container { max-width: 100%; padding: 0; }
-    .hero, .project-card, .comp-card, .doc-card {
-      border: 1px solid #ccc;
-      box-shadow: none;
-      page-break-inside: avoid;
-    }
-  }
-</style>
+        body {
+            background-color: #0b1326;
+            color: #dae2fd;
+            font-family: 'Inter', sans-serif;
+            word-break: keep-all;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .fine-line {
+            height: 1px;
+            background: #334155;
+            width: 100%;
+        }
+        .custom-bullet {
+            width: 3px;
+            height: 3px;
+            background-color: #ffb77d;
+            display: inline-block;
+            margin-right: 8px;
+            margin-bottom: 2px;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "inverse-primary": "#904d00",
+                      "surface-dim": "#0b1326",
+                      "tertiary-fixed-dim": "#96ccff",
+                      "on-primary-fixed-variant": "#6e3900",
+                      "on-surface": "#dae2fd",
+                      "outline": "#a38c7c",
+                      "surface-container-low": "#131b2e",
+                      "secondary-container": "#464a4b",
+                      "on-primary-fixed": "#2f1500",
+                      "tertiary": "#96ccff",
+                      "surface-container-lowest": "#060e20",
+                      "secondary-fixed-dim": "#c4c7c9",
+                      "surface": "#0b1326",
+                      "on-secondary": "#2d3133",
+                      "inverse-on-surface": "#283044",
+                      "inverse-surface": "#dae2fd",
+                      "on-primary": "#4d2600",
+                      "primary-fixed": "#ffdcc3",
+                      "on-tertiary": "#003353",
+                      "primary-container": "#d97707",
+                      "background": "#0b1326",
+                      "surface-container-high": "#222a3d",
+                      "surface-container": "#171f33",
+                      "on-secondary-fixed": "#191c1e",
+                      "on-error": "#690005",
+                      "on-error-container": "#ffdad6",
+                      "on-background": "#dae2fd",
+                      "error-container": "#93000a",
+                      "primary-fixed-dim": "#ffb77d",
+                      "error": "#ffb4ab",
+                      "surface-tint": "#ffb77d",
+                      "outline-variant": "#554336",
+                      "tertiary-fixed": "#cee5ff",
+                      "secondary": "#c4c7c9",
+                      "on-tertiary-fixed-variant": "#004a75",
+                      "on-primary-container": "#432100",
+                      "primary": "#ffb77d",
+                      "tertiary-container": "#0297e8",
+                      "on-tertiary-container": "#002c48",
+                      "on-secondary-container": "#b6b9bb",
+                      "secondary-fixed": "#e0e3e5",
+                      "surface-variant": "#2d3449",
+                      "on-surface-variant": "#dbc2b0",
+                      "surface-container-highest": "#2d3449",
+                      "on-secondary-fixed-variant": "#444749",
+                      "surface-bright": "#31394d",
+                      "on-tertiary-fixed": "#001d32"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "base": "8px",
+                      "element-gap": "32px",
+                      "container-max": "1140px",
+                      "gutter": "24px",
+                      "section-gap": "120px"
+              },
+              "fontFamily": {
+                      "headline-sm": ["\"Source Serif 4\""],
+                      "label-caps": ["Inter"],
+                      "display-lg": ["\"Source Serif 4\""],
+                      "headline-md": ["\"Source Serif 4\""],
+                      "display-lg-mobile": ["\"Source Serif 4\""],
+                      "body-md": ["Inter"],
+                      "metric-xl": ["Inter"],
+                      "body-lg": ["Inter"]
+              },
+              "fontSize": {
+                      "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                      "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                      "display-lg-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "metric-xl": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
 </head>
-<body>
-
-<!-- STICKY NAVBAR -->
-<nav class="navbar">
-  <div class="nav-container">
-    <a href="#" class="nav-logo">LEE YEONGMIN</a>
-    <div class="nav-links">
-      <a href="#competencies">Competencies</a>
-      <a href="#projects">Projects</a>
-      <a href="#documents">Documents</a>
-      <a href="#education">Education</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </div>
-</nav>
-
-<div class="container">
-
-  <!-- HERO HEADER -->
-  <header class="hero fade-in-up">
-    <div class="badge-status">Product Manager</div>
-    <h1>이영민</h1>
-    <div class="role">Technical Product Manager</div>
-    <p class="statement">
-      모호함을 배제하고, 엄밀한 논리와 데이터 기반 실행으로 프로덕트의 구조적 본질을 증명합니다.
-    </p>
-    <div class="hero-actions">
-      <button onclick="sendEmail()" class="btn btn-primary">✉️ 이메일 문의하기</button>
-      <a href="#documents" class="btn btn-secondary">📄 주요 기획서 다운로드</a>
-    </div>
-  </header>
-
-  <!-- CORE COMPETENCIES -->
-  <section id="competencies" class="fade-in-up">
-    <div class="section-title">Core Competencies</div>
-    <div class="competency-grid">
-      <div class="comp-card">
-        <h3>데이터 & 유저 중심 개선</h3>
-        <p>유저 플레이 패턴과 피드백 분석을 기반으로 병목 구간을 진단하고, 구조 수정을 통해 실제 유저 이탈 및 피로도를 구조적으로 해결합니다.</p>
-      </div>
-      <div class="comp-card">
-        <h3>엔터프라이즈 PM & 소통</h3>
-        <p>공공기관 및 B2B/B2G 사업의 복잡한 요구사항을 개발·디자인 팀이 명확히 이해할 수 있는 시스템 기획서와 WBS로 정밀 전환합니다.</p>
-      </div>
-      <div class="comp-card">
-        <h3>AI & 시스템 구조화</h3>
-        <p>TabNet 대리모델 및 역최적화(Inverse Optimization) 기반 프레임워크 연구 등 기술적 원리를 프로덕트에 접목하는 능력을 지녔습니다.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS & EXPERIENCE -->
-  <section id="projects" class="fade-in-up">
-    <div class="section-title">Projects & Experience</div>
-    <div class="timeline">
-
-      <!-- Card 1: Steam Games -->
-      <article class="project-card">
-        <div class="card-header">
-          <span class="category-badge">B2C Commercial Product</span>
-          <span class="period">2022.01 - 2024.08</span>
-        </div>
-        <h3>스팀 상용화 게임 총괄 출시 ('In to the 029' & 'I am Sorry')</h3>
-        <p class="project-summary">인디 퍼즐 호러 프로덕트의 기획 총괄(PL)로서 초기 컨셉 기획부터 런칭 및 운영 전 과정을 리드했습니다.</p>
-        
-        <!-- 프로젝트 이미지 그리드 -->
-        <div class="project-img-grid">
-          <div class="project-img-wrapper">
-            <img src="https://i.ibb.co/6JtY2y3H/intothe029.png" alt="In to the 029 게임 화면" class="project-img" loading="lazy">
-          </div>
-          <div class="project-img-wrapper">
-            <img src="https://i.ibb.co/ZRVbmtkn/iamsorry.png" alt="I am Sorry 게임 화면" class="project-img" loading="lazy">
-          </div>
-        </div>
-
-        <ul class="bullet-points">
-          <li><strong>유저 피로도 문제 정의 및 구조 개선:</strong> 전작 'In to the 029'의 병렬/반복 맵 구조에서 발견된 사용자 피로 문제를 분석해, 차기작 'I am Sorry'에서는 맵 구조를 선형화하고 기믹 상태 변화 중심으로 재설계하여 피로 이슈 재발을 방지했습니다.</li>
-          <li><strong>라이브 서비스 및 운영:</strong> 스팀 런칭 후 유저 데이터 모니터링, 프로모션/할인 설정 및 글로벌 유저 피드백 수집 기반의 이슈 대응을 총괄했습니다.</li>
-        </ul>
-
-        <!-- Steam 스토어 이동 및 PDF 문서 다운로드 버튼 그룹 -->
-        <div class="doc-btn-group">
-          <a href="https://store.steampowered.com/app/2052170" target="_blank" rel="noopener noreferrer" class="btn-steam">
-            🎮 'In to the 029' Steam 스토어
-          </a>
-          <a href="https://store.steampowered.com/app/3034120" target="_blank" rel="noopener noreferrer" class="btn-steam">
-            🎮 'I am Sorry' Steam 스토어
-          </a>
-          <a href="./I am Sorry 게임 분석서.pdf" download="I am Sorry 게임 분석서.pdf" class="btn-doc">
-            📥 'I am Sorry' 게임 분석서 (개발 회고 포함) PDF
-          </a>
-          <a href="./시스템 안정성을 고려한 방어력 감소 시스템 설계.pdf" download="시스템 안정성을 고려한 방어력 감소 시스템 설계.pdf" class="btn-doc">
-            📥 방어력 감소 시스템 설계서 PDF
-          </a>
-        </div>
-
-        <div class="tag-container" style="margin-top: 20px;">
-          <span class="tag">Product Lead</span>
-          <span class="tag">Steam Launch</span>
-          <span class="tag">User Experience</span>
-          <span class="tag">Level Design</span>
-        </div>
-      </article>
-
-      <!-- Card 2: Korail / Enterprise XR -->
-      <article class="project-card">
-        <div class="card-header">
-          <span class="category-badge">B2B / B2G Enterprise PM</span>
-          <span class="period">2022.10 - 2025.09</span>
-        </div>
-        <h3>코레일 철도 정비 VR & 공공기관 XR 시뮬레이터 사업 PM</h3>
-        <p class="project-summary">코레일 신입 정비사용 XR 시뮬레이션 및 다수의 국가 가상훈련 콘텐츠 사업 PM/PL을 담당했습니다.</p>
-        
-        <!-- 코레일 프로젝트 이미지 -->
-        <div class="project-img-grid" style="grid-template-columns: 1fr;">
-          <div class="project-img-wrapper" style="height: 260px;">
-            <img src="https://i.ibb.co/tPFnRVn5/korail.png" alt="코레일 VR 시뮬레이터 프로젝트 이미지" class="project-img" loading="lazy">
-          </div>
-        </div>
-
-        <ul class="bullet-points">
-          <li><strong>이해관계자 요구사항 정의:</strong> 발주처 요구사항을 분석하여 개발/디자인 명세서, UX 키매핑 설계서, 운영자/사용자 매뉴얼로 치환했습니다.</li>
-          <li><strong>학습 곡선 단축:</strong> 비숙련 직원의 직관적 진입을 고려한 UI/UX 로직을 설계하여 진입 장벽과 작업 오류율을 낮췄습니다.</li>
-        </ul>
-
-        <div class="tag-container">
-          <span class="tag">Project Management</span>
-          <span class="tag">Requirements Spec</span>
-          <span class="tag">XR Simulation</span>
-          <span class="tag">B2G Project</span>
-        </div>
-      </article>
-
-      <!-- Card 3: AI Logic -->
-      <article class="project-card">
-        <div class="card-header">
-          <span class="category-badge">AI & System Logic</span>
-          <span class="period">2019.07 - 2021.08</span>
-        </div>
-        <h3>국제진료 STT-AI VR & 태권도 VR AI 파이프라인 설계</h3>
-        <p class="project-summary">음성인식(STT) 기반 의료통역 교육 시스템 및 태권도 AI 행동 패턴 로직을 개발했습니다.</p>
-        <ul class="bullet-points">
-          <li><strong>AI Decision Logic:</strong> 6종 캐릭터의 무술 콘셉트별 행동 패턴 및 확률 기반 Decision Logic 구축.</li>
-          <li><strong>인터랙션 구조 설계:</strong> STT 기반 대화 인식-평가 점수 산출 데이터 파이프라인 및 인터랙션 시스템 설계.</li>
-        </ul>
-        <div class="tag-container">
-          <span class="tag">AI Behavior Logic</span>
-          <span class="tag">STT Integration</span>
-          <span class="tag">System Design</span>
-        </div>
-      </article>
-
-    </div>
-  </section>
-
-  <!-- KEY DOCUMENTS (DOWNLOAD SECTION) -->
-  <section id="documents" class="fade-in-up">
-    <div class="section-title">Key Documents & Attachments</div>
-    <div class="doc-card-grid">
-      
-      <div class="doc-card">
-        <div class="doc-card-info">
-          <h4>📄 I am Sorry 게임 분석서</h4>
-          <p>스팀 상용화 퍼즐 호러 프로덕트 'I am Sorry'의 유저 피드백 분석, 레벨 디자인 구조 개선 및 개발 회고가 담긴 공식 분석 문서입니다.</p>
-        </div>
-        <a href="./I am Sorry 게임 분석서.pdf" download="I am Sorry 게임 분석서.pdf" class="btn-doc">
-          📥 PDF 다운로드
-        </a>
-      </div>
-
-      <div class="doc-card">
-        <div class="doc-card-info">
-          <h4>📐 방어력 감소 시스템 설계서</h4>
-          <p>게임 수치 밸런싱의 수치적 한계를 예방하고, 시스템 안정성 및 확장성을 고려하여 작성한 시스템 기획/설계 문서입니다.</p>
-        </div>
-        <a href="./시스템 안정성을 고려한 방어력 감소 시스템 설계.pdf" download="시스템 안정성을 고려한 방어력 감소 시스템 설계.pdf" class="btn-doc">
-          📥 PDF 다운로드
-        </a>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- EDUCATION & RESEARCH -->
-  <section id="education" class="fade-in-up">
-    <div class="section-title">Education & Research</div>
-    <div class="timeline">
-      <article class="project-card">
-        <div class="card-header">
-          <span class="category-badge">석사 재학</span>
-          <span class="period">2024.09 - 현재</span>
-        </div>
-        <h3>숭실대학교 대학원 AI테크노융합학과</h3>
-        <p class="project-summary">
-          <strong>연구 내용:</strong> TabNet 대리모델(Surrogate Model)과 역최적화(Inverse Optimization), 경사하강법 기반의 밸런싱 자동화 프레임워크 연구. 데이터 기반 수치 생성 및 자동화 로직 구축을 탐구하고 있습니다.
-        </p>
-      </article>
-
-      <article class="project-card">
-        <div class="card-header">
-          <span class="category-badge">학사 졸업</span>
-          <span class="period">2014.03 - 2020.02</span>
-        </div>
-        <h3>전주대학교 게임콘텐츠학과</h3>
-        <p class="project-summary">게임 시스템 기획, 콘텐츠 개발 및 멀티미디어 공학 전반 이수.</p>
-      </article>
-    </div>
-  </section>
-
-  <!-- CONTACT SECTION -->
-  <section id="contact" class="contact-section fade-in-up">
-    <h3>Get in Touch</h3>
-    <p>프로덕트 기획, 데이터 기반 시스템 설계, 프로젝트 협업에 대해 이야기 나누고 싶다면 언제든 연락해 주세요.</p>
-    <button onclick="sendEmail()" class="contact-btn">ym5567@naver.com 메일 보내기</button>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>© Lee Yeong-min. All rights reserved.</p>
-  </footer>
-
+<body class="bg-background text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-background border-b border-outline-variant">
+<div class="max-w-container-max mx-auto px-gutter flex justify-between items-center h-20">
+<span class="font-headline-sm text-headline-sm font-bold tracking-tight text-on-surface">EXECUTIVE DOSSIER</span>
+<div class="hidden md:flex gap-12 items-center">
+<a class="font-label-caps text-label-caps text-primary border-b border-primary pb-1 transition-all duration-200" href="#">Expertise</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Projects</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Contact</a>
 </div>
+<button class="font-label-caps text-label-caps border border-primary text-primary px-6 py-2 bg-primary/5 hover:bg-primary/10 transition-all duration-300">
+                Download Resume
+            </button>
+</div>
+</nav>
+<main class="mt-20">
+<!-- Hero Section: Split Screen -->
+<section class="max-w-container-max mx-auto px-gutter py-section-gap border-b border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-24 items-start">
+<div class="space-y-8">
+<span class="font-label-caps text-label-caps text-primary block">STRATEGIC PRODUCT LEADERSHIP</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface max-w-lg">
+                        Architecture of Engagement: Data-Led Game Economy &amp; Systems Design.
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">
+                        Applying rigorous analytical frameworks to the art of play. I specialize in scaling mid-core mobile titles through sustainable monetization and long-term player retention.
+                    </p>
+</div>
+<div class="bg-surface-container border border-outline-variant p-10 relative overflow-hidden">
 
-<!-- TOAST NOTIFICATION -->
-<div id="toast" class="toast">📋 이메일 주소가 복사되었습니다! (ym5567@naver.com)</div>
-
+<div class="relative z-10 space-y-8">
+<h2 class="font-headline-sm text-headline-sm text-primary">Career Snapshot</h2>
+<div class="space-y-4">
+<div class="flex justify-between items-end">
+<span class="font-label-caps text-label-caps text-on-surface-variant">CURRENT TENURE</span>
+<span class="font-body-md text-body-md font-bold">Principal PM @ Global Interactive</span>
+</div>
+<div class="fine-line"></div>
+<div class="flex justify-between items-end">
+<span class="font-label-caps text-label-caps text-on-surface-variant">LTV IMPROVEMENT</span>
+<span class="font-body-md text-body-md font-bold">+42% Avg. per Cohort</span>
+</div>
+<div class="fine-line"></div>
+<div class="flex justify-between items-end">
+<span class="font-label-caps text-label-caps text-on-surface-variant">LIVE OPS SCALE</span>
+<span class="font-body-md text-body-md font-bold">$120M Annual Run Rate</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Values: Bento Grid -->
+<section class="max-w-container-max mx-auto px-gutter py-section-gap">
+<h2 class="font-headline-md text-headline-md mb-element-gap">How I Work</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="bg-surface-container border border-outline-variant p-8 flex flex-col justify-between hover:border-primary/30 transition-colors duration-300">
+<div class="space-y-6">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="insights"></span>
+<h3 class="font-headline-sm text-headline-sm">Data Synthetics</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Translating raw telemetry into actionable roadmaps. I focus on behavioral clusters and predictive modeling to pre-empt churn.
+                        </p>
+</div>
+<div class="mt-12">
+<span class="font-metric-xl text-metric-xl text-primary block">14.2%</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Retention Uplift (D30)</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container border border-outline-variant p-8 flex flex-col justify-between hover:border-primary/30 transition-colors duration-300">
+<div class="space-y-6">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="account_balance"></span>
+<h3 class="font-headline-sm text-headline-sm">Economic Balance</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Designing sinks and faucets that maintain scarcity without compromising the player's sense of progression and agency.
+                        </p>
+</div>
+<div class="mt-12">
+<span class="font-metric-xl text-metric-xl text-primary block">2.4x</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">ARPPU Growth Index</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container border border-outline-variant p-8 flex flex-col justify-between hover:border-primary/30 transition-colors duration-300">
+<div class="space-y-6">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="groups"></span>
+<h3 class="font-headline-sm text-headline-sm">Player Advocacy</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Bridging the gap between commercial KPIs and the fundamental emotional drivers that make gaming a core human experience.
+                        </p>
+</div>
+<div class="mt-12">
+<span class="font-metric-xl text-metric-xl text-primary block">85+</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Net Promoter Score</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Proof of Work: Structured Case Studies -->
+<section class="bg-surface-container-lowest border-t border-b border-outline-variant py-section-gap">
+<div class="max-w-container-max mx-auto px-gutter">
+<h2 class="font-headline-md text-headline-md mb-element-gap">Featured Case Studies</h2>
+<div class="space-y-12">
+<!-- Case Study 1 -->
+<article class="bg-surface border border-outline-variant overflow-hidden group">
+<div class="flex flex-col md:flex-row">
+<div class="w-full md:w-1/3 bg-surface-variant min-h-[300px]">
+<div class="w-full h-full" data-alt="A sophisticated, high-end 3D abstract visualization of game economy data flowing through architectural glass structures. The color palette features deep slate, muted amber, and soft charcoal. The mood is professional, intellectual, and strategic, illuminated by low-key cinematic lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDctrgvEqo7XcbXTA8GHpBDmS0_Qm3Q-ZN0y8Hm6HOgqZ00bxQcpnEePGbMWG2ZOYjk3prb46QurAqvGSpNFpDBGrt-bFVzM3K26rx4KAzBmpJZv9yLP_7Mfna8dRWj5udlGeuqDxDEXARmuS-u6fOvLPRYA3JgsCE8UlRVvxLBfnZUqpUmD9vjAVJrLxN-6PTvJNoxeZa5I_0XI93snCG3m9y4usm3UjrZoHFh22XoikqEzEsED9dR')"></div>
+</div>
+<div class="p-10 flex-1 space-y-8">
+<div class="flex justify-between items-start">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Project: Crimson Citadel Revival</h3>
+<span class="font-label-caps text-label-caps bg-surface-variant px-3 py-1 text-primary">Live Ops Strategy</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="space-y-2">
+<span class="font-label-caps text-label-caps text-on-surface-variant">THE PROBLEM</span>
+<p class="font-body-md text-body-md">Stagnant endgame participation and hyper-inflation in the primary premium currency market.</p>
+</div>
+<div class="space-y-2">
+<span class="font-label-caps text-label-caps text-on-surface-variant">CONTRIBUTION</span>
+<p class="font-body-md text-body-md">Redesigned the Seasonal Battle Pass tiered rewards and introduced a deflationary 'Relic Sink'.</p>
+</div>
+<div class="space-y-2">
+<span class="font-label-caps text-label-caps text-on-surface-variant">RESULT</span>
+<p class="font-body-md text-body-md text-primary font-bold">+28% Daily Revenue sustained over 4 quarters. Economy stabilized within 14 days.</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="font-label-caps text-label-caps text-primary flex items-center gap-2 group-hover:gap-4 transition-all">
+                                        CASE STUDY <span class="material-symbols-outlined text-sm" data-icon="arrow_forward"></span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Case Study 2 -->
+<article class="bg-surface border border-outline-variant overflow-hidden group">
+<div class="flex flex-col md:flex-row">
+<div class="w-full md:w-1/3 bg-surface-variant min-h-[300px] order-first md:order-last">
+<div class="w-full h-full" data-alt="A minimalist digital landscape representing player journey mapping, shown as elegant glowing lines on a dark obsidian surface. Warm amber nodes highlight key conversion points. The style is editorial and clean, reminiscent of a high-end management consultant presentation." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDIcr6nBmrG_r1gsmeI8lxKWgOGdBuzA3fO8X8Rheo8qk-mIYkI3iNYDRqj9VwmT2Eq1zG5C9Vdac5W5okOWuHPqSu-yHgMqlY7pBKmK4X23XvC9d5vDa1HCJY_7q4SL5cQMoXx_BkyhBYyCE_ImYQ3oHdQi9No-eCHl8xzJHWHo6SIu_Ow4tBwuNwWfmDtbv5k0_bNirPTgrGW-BSuuZCJqtceDc64HdkPkCc90H7Na-KhKsjp91Ge')"></div>
+</div>
+<div class="p-10 flex-1 space-y-8">
+<div class="flex justify-between items-start">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Project: Project Horizon Onboarding</h3>
+<span class="font-label-caps text-label-caps bg-surface-variant px-3 py-1 text-primary">Growth &amp; UX</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="space-y-2">
+<span class="font-label-caps text-label-caps text-on-surface-variant">THE PROBLEM</span>
+<p class="font-body-md text-body-md">Critical 65% drop-off at Tutorial Step 4. Players confused by complex core loop mechanics.</p>
+</div>
+<div class="space-y-2">
+<span class="font-label-caps text-label-caps text-on-surface-variant">CONTRIBUTION</span>
+<p class="font-body-md text-body-md">Spearheaded A/B testing on 'Just-in-Time' UI patterns and simplified hero selection logic.</p>
+</div>
+<div class="space-y-2">
+<span class="font-label-caps text-label-caps text-on-surface-variant">RESULT</span>
+<p class="font-body-md text-body-md text-primary font-bold">Tutorial completion increased to 82%. First-purchase conversion rose by 12%.</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="font-label-caps text-label-caps text-primary flex items-center gap-2 group-hover:gap-4 transition-all">
+                                        CASE STUDY <span class="material-symbols-outlined text-sm" data-icon="arrow_forward"></span>
+</button>
+</div>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- Executive Summary / List Section -->
+<section class="max-w-container-max mx-auto px-gutter py-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+<div class="md:col-span-4">
+<h2 class="font-headline-md text-headline-md sticky top-32">Technical Proficiency</h2>
+</div>
+<div class="md:col-span-8 space-y-12">
+<div class="space-y-4">
+<h4 class="font-label-caps text-label-caps text-primary">MARKET ANALYSIS</h4>
+<ul class="space-y-2">
+<li class="font-body-md text-body-md"><span class="custom-bullet"></span>Competitor Intelligence &amp; Benchmarking</li>
+<li class="font-body-md text-body-md"><span class="custom-bullet"></span>Trend Forecasting &amp; Genre Evolution Mapping</li>
+<li class="font-body-md text-body-md"><span class="custom-bullet"></span>TAM/SAM Financial Modeling</li>
+</ul>
+<div class="fine-line"></div>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-caps text-label-caps text-primary">PRODUCT OPERATIONS</h4>
+<ul class="space-y-2">
+<li class="font-body-md text-body-md"><span class="custom-bullet"></span>Agile/Scrum Lifecycle Management</li>
+<li class="font-body-md text-body-md"><span class="custom-bullet"></span>Telemetry Specification (Amplitude, Tableau)</li>
+<li class="font-body-md text-body-md"><span class="custom-bullet"></span>Live Ops Calendar Design &amp; Execution</li>
+</ul>
+<div class="fine-line"></div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant">
+<div class="max-w-container-max mx-auto px-gutter py-section-gap flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="space-y-2 text-center md:text-left">
+<span class="font-headline-sm text-headline-sm text-on-surface block">EXECUTIVE DOSSIER</span>
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 Strategic Lead. All Rights Reserved.</p>
+</div>
+<div class="flex gap-8">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">LinkedIn</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">GitHub</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Email</a>
+</div>
+</div>
+</footer>
 <script>
-// 클립보드 복사 및 토스트 출력
-function sendEmail() {
-  const email = "ym5567@naver.com";
-  
-  navigator.clipboard.writeText(email).then(() => {
-    showToast();
-    setTimeout(() => {
-      window.location.href = `mailto:${email}`;
-    }, 300);
-  }).catch(() => {
-    window.location.href = `mailto:${email}`;
-  });
-}
-
-function showToast() {
-  const toast = document.getElementById("toast");
-  toast.classList.add("show");
-  setTimeout(() => {
-    toast.classList.remove("show");
-  }, 3000);
-}
-
-// Scroll Intersection Observer Motion
-document.addEventListener("DOMContentLoaded", () => {
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: "0px 0px -40px 0px"
-  };
-
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        observer.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
-
-  document.querySelectorAll(".fade-in-up").forEach(el => {
-    observer.observe(el);
-  });
-});
-</script>
-
-</body>
-</html>
+        // Micro-interaction for smooth scroll or hover effects could be added here
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body></html>
